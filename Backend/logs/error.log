@@ -1,0 +1,1766 @@
+[2026-05-31 16:52:22] ERROR : Database Connection Error:
+[2026-05-31 17:31:41] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:41] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:41] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:41] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:41] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:41] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:41] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:41] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:41] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:41] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:41] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:41] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:42] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:42] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:42] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:42] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:42] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:42] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:42] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:42] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:42] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:42] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:42] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:42] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:31:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:31:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:31:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:32:32] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:32:32] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:32:32] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:32:32] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:32:32] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:32:32] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:32:32] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:32:32] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:32:32] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:32:32] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:32:32] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:32:32] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:32:54] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:32:54] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:32:54] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:32:54] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:32:54] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:32:54] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:33:59] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:33:59] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:33:59] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:33:59] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:33:59] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:33:59] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:33:59] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:33:59] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:33:59] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:33:59] ERROR : ERROR NAME: TypeError
+[2026-05-31 17:33:59] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 17:33:59] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (E:\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 17:36:01] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 18:59:56] ERROR : ERROR NAME: TypeError
+[2026-05-31 18:59:56] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 18:59:56] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 18:59:56] ERROR : ERROR NAME: TypeError
+[2026-05-31 18:59:56] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 18:59:56] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 18:59:56] ERROR : ERROR NAME: TypeError
+[2026-05-31 18:59:56] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 18:59:56] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 18:59:56] ERROR : ERROR NAME: TypeError
+[2026-05-31 18:59:56] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 18:59:56] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:30] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:30] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:30] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:30] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:30] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:30] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:34] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:34] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:34] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:34] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:34] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:34] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:35] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:35] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:35] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:36] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:36] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:36] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:36] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:36] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:36] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:37] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:37] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:37] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:39] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:39] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:39] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:44] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:44] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:44] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:44] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:44] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:44] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:45] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:45] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:45] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:46] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:46] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:46] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:46] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:46] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:46] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:48] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:48] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:48] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:00:51] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:00:51] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:00:51] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:14:26] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:14:26] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:14:26] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:14:26] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:14:26] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:14:26] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:14:26] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:14:26] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:14:26] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:14:26] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:14:26] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:14:26] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:30:52] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:30:52] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:30:52] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:30:52] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:30:52] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:30:52] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:30:52] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:30:52] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:30:52] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:30:52] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:30:52] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:30:52] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:31:53] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:31:53] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:31:53] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:31:53] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:31:53] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:31:53] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:31:53] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:31:53] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:31:53] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:31:53] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:31:53] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:31:53] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:32:34] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:32:34] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:32:34] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:33:30] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:33:30] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:33:30] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:33:30] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:33:30] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:33:30] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:37:30] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 19:42:08] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 19:47:31] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:47:31] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:47:31] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:47:31] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:47:31] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:47:31] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:50:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:50:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:50:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:50:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:50:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:50:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:51:16] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:51:16] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:51:16] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:51:17] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:51:17] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:51:18] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 19:54:23] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 19:57:38] ERROR : ERROR NAME: TypeError
+[2026-05-31 19:57:38] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 19:57:38] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:00:45] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:00:45] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:00:45] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:00:45] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:00:45] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:00:45] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:01:15] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:01:16] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:01:16] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:01:16] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:01:16] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:01:16] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:13:41] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:13:41] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:13:41] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:13:41] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:13:41] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:13:41] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:09] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:09] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:09] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:09] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:09] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:09] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:09] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:09] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:09] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:09] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:09] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:09] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:21] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:21] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:21] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:21] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:21] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:21] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:21] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:21] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:21] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:21] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:21] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:21] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:25] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:25] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:25] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:25] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:25] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:25] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:25] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:25] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:25] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:47:25] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:47:25] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:47:25] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:48:24] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:48:24] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:48:24] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:51:32] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:51:32] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:51:32] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:51:56] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:51:56] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:51:56] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:52:43] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:52:43] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:52:43] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:53:01] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:53:01] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:53:01] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:113:18
+    at Array.forEach (<anonymous>)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\express-mongo-sanitize\index.js:110:44
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:53:50] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:53:50] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:53:50] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:196:16
+    at Array.forEach (<anonymous>)
+    at file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:189:42
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:54:58] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:54:58] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:54:58] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:196:16
+    at Array.forEach (<anonymous>)
+    at file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:189:42
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at compression (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+[2026-05-31 20:55:15] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:55:15] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:55:15] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\xss-clean\lib\index.js:8:30
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at hpp (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+[2026-05-31 20:55:30] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:55:30] ERROR : ERROR MESSAGE: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-05-31 20:55:30] ERROR : TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\xss-clean\lib\index.js:8:30
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+    at hpp (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:342:13)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:297:9
+[2026-05-31 20:57:37] ERROR : ERROR NAME: TypeError
+[2026-05-31 20:57:37] ERROR : ERROR MESSAGE: Cannot destructure property 'email' of 'undefined' as it is undefined.
+[2026-05-31 20:57:37] ERROR : TypeError: Cannot destructure property 'email' of 'undefined' as it is undefined.
+    at authenticate (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:559:5)
+    at file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:63:15
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:295:15
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+[2026-05-31 21:00:01] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:01:05] ERROR : ERROR NAME: TypeError
+[2026-05-31 21:01:05] ERROR : ERROR MESSAGE: Cannot destructure property 'email' of 'undefined' as it is undefined.
+[2026-05-31 21:01:05] ERROR : TypeError: Cannot destructure property 'email' of 'undefined' as it is undefined.
+    at authenticate (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:559:5)
+    at file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:63:15
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:295:15
+    at processParams (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+[2026-05-31 21:01:32] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:01:44] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:01:44] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:01:48] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:01:49] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:01:53] ERROR : ERROR NAME: Error
+[2026-05-31 21:01:53] ERROR : ERROR MESSAGE: Email and password are required
+[2026-05-31 21:01:53] ERROR : Error: Email and password are required
+    at authenticate (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:576:19)
+    at file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:62:15
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:295:15
+    at processParams (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+[2026-05-31 21:02:02] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:02:02] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:02:34] ERROR : ERROR NAME: Error
+[2026-05-31 21:02:34] ERROR : ERROR MESSAGE: Email and password are required
+[2026-05-31 21:02:34] ERROR : Error: Email and password are required
+    at authenticate (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:576:19)
+    at file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:62:15
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:295:15
+    at processParams (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+[2026-05-31 21:03:01] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:03:01] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:04:38] ERROR : ERROR NAME: Error
+[2026-05-31 21:04:38] ERROR : ERROR MESSAGE: Email and password are required
+[2026-05-31 21:04:38] ERROR : Error: Email and password are required
+    at authenticate (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:576:19)
+    at file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:65:15
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:295:15
+    at processParams (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+[2026-05-31 21:04:51] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:05:30] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:05:30] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:05:36] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:05:37] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:06:09] ERROR : ERROR NAME: Error
+[2026-05-31 21:06:09] ERROR : ERROR MESSAGE: Email and password are required
+[2026-05-31 21:06:09] ERROR : Error: Email and password are required
+    at authenticate (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:576:19)
+    at file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:65:15
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:295:15
+    at processParams (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+[2026-05-31 21:06:34] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:06:34] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:06:34] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:06:38] ERROR : ERROR NAME: Error
+[2026-05-31 21:06:38] ERROR : ERROR MESSAGE: Email and password are required
+[2026-05-31 21:06:38] ERROR : Error: Email and password are required
+    at authenticate (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:576:19)
+    at file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:65:15
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:295:15
+    at processParams (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (D:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+[2026-05-31 21:06:53] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:06:53] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:06:53] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:07:32] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:07:33] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:07:33] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:07:33] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:07:38] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:07:38] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:07:39] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:07:39] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:08:31] ERROR : ERROR NAME: Error
+[2026-05-31 21:08:31] ERROR : ERROR MESSAGE: Email and password are required
+[2026-05-31 21:08:31] ERROR : Error: Email and password are required
+    at authenticate (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:576:19)
+    at file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:65:15
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\lib\layer.js:152:17)
+    at d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:295:15
+    at processParams (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:582:12)
+    at next (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\router\index.js:291:5)
+[2026-05-31 21:10:16] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:10:16] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:10:17] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:10:17] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:10:17] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:12:39] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:12:39] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:12:39] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:12:40] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:12:40] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:17:00] ERROR : ERROR NAME: SyntaxError
+[2026-05-31 21:17:00] ERROR : ERROR MESSAGE: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[2026-05-31 21:17:00] ERROR : SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parse (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\body-parser\lib\types\json.js:72:19)
+    at d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\body-parser\lib\read.js:162:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\raw-body\index.js:238:16)
+    at done (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (d:\INDPRO\ArtisanHandiCraftMarketPlace\ArtisanHandiCraftMarketPlace\Backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[2026-05-31 21:18:10] ERROR : ERROR NAME: Error
+[2026-05-31 21:18:10] ERROR : ERROR MESSAGE: Invalid email
+[2026-05-31 21:18:10] ERROR : Error: Invalid email
+    at authenticate (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/services/authService.js:610:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/APIs/CommonAPI.js:65:9
+[2026-05-31 21:20:18] ERROR : UNCAUGHT EXCEPTION
+[2026-05-31 21:21:16] ERROR : Server error event:
+[2026-05-31 21:21:16] ERROR : Server error event:
+[2026-05-31 21:21:16] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:21:16] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:21:16] ERROR : Server error event:
+[2026-05-31 21:21:16] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:21:16] ERROR : Server error event:
+[2026-05-31 21:21:16] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:21:16] ERROR : Server error event:
+[2026-05-31 21:21:16] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:21:16] ERROR : Server error event:
+[2026-05-31 21:21:16] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:17] ERROR : Server error event:
+[2026-05-31 21:21:17] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:21:18] ERROR : Server error event:
+[2026-05-31 21:21:18] ERROR : Server error event:
+[2026-05-31 21:21:18] ERROR : Server error event:
+[2026-05-31 21:22:49] ERROR : Server error event:
+[2026-05-31 21:22:49] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:22:49] ERROR : Server error event:
+[2026-05-31 21:22:49] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:50] ERROR : Server error event:
+[2026-05-31 21:22:50] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:51] ERROR : Server error event:
+[2026-05-31 21:22:51] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:51] ERROR : Server error event:
+[2026-05-31 21:22:51] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:51] ERROR : Server error event:
+[2026-05-31 21:22:51] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:51] ERROR : Server error event:
+[2026-05-31 21:22:51] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:51] ERROR : Server error event:
+[2026-05-31 21:22:51] ERROR : Server error event:
+[2026-05-31 21:22:51] ERROR : Server error event:
+[2026-05-31 21:22:54] ERROR : Server error event:
+[2026-05-31 21:22:54] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:22:55] ERROR : Server error event:
+[2026-05-31 21:22:55] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:55] ERROR : Server error event:
+[2026-05-31 21:22:55] ERROR : Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///d:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:22:56] ERROR : Server error event:
+[2026-05-31 21:23:07] ERROR : Server error event:
+[2026-05-31 21:23:07] ERROR : Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at connectDB (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:695:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-05-31 21:23:08] ERROR : Server error event:
+[2026-05-31 21:23:08] ERROR : Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at startServer (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:690:12)
+    at Timeout._onTimeout (file:///D:/INDPRO/ArtisanHandiCraftMarketPlace/ArtisanHandiCraftMarketPlace/Backend/server.js:678:28)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[2026-05-31 21:57:42] ERROR : Server error event:
+[2026-05-31 21:57:43] ERROR : Server error event:
+[2026-05-31 21:57:43] ERROR : Server error event:
+[2026-05-31 21:57:43] ERROR : Server error event:
+[2026-05-31 21:57:43] ERROR : Server error event:
+[2026-05-31 21:57:43] ERROR : Server error event:
+[2026-05-31 21:57:43] ERROR : Server error event:
+[2026-05-31 21:57:43] ERROR : Server error event:
+[2026-05-31 21:57:54] ERROR : Server error event:
+[2026-05-31 21:57:54] ERROR : Server error event:
+[2026-05-31 21:57:54] ERROR : Server error event:
+[2026-05-31 21:57:55] ERROR : Server error event:
+[2026-05-31 21:57:55] ERROR : Server error event:
+[2026-05-31 21:57:55] ERROR : Server error event:
+[2026-05-31 21:57:55] ERROR : Server error event:
+[2026-05-31 21:57:55] ERROR : Server error event:
+[2026-05-31 22:00:32] ERROR : Server error event:
+[2026-05-31 22:04:10] ERROR : Server error event:
+[2026-05-31 22:05:07] ERROR : Server error event:
+[2026-05-31 22:05:07] ERROR : Server error event:
+[2026-05-31 22:05:07] ERROR : Server error event:
+[2026-05-31 22:05:07] ERROR : Server error event:
+[2026-05-31 22:05:07] ERROR : Server error event:
+[2026-05-31 22:05:07] ERROR : Server error event:
+[2026-05-31 22:05:07] ERROR : Server error event:
+[2026-05-31 22:05:07] ERROR : Server error event:
+[2026-05-31 22:08:16] ERROR : Server error event:
+[2026-05-31 22:08:16] ERROR : Server error event:
+[2026-05-31 22:08:16] ERROR : Server error event:
+[2026-05-31 22:08:16] ERROR : Server error event:
+[2026-05-31 22:08:16] ERROR : Server error event:
+[2026-05-31 22:08:17] ERROR : Server error event:
+[2026-05-31 22:08:17] ERROR : Server error event:
+[2026-05-31 22:08:17] ERROR : Server error event:
+[2026-05-31 22:09:54] ERROR : Server error event:
+[2026-05-31 22:33:49] ERROR : Server error event:
+[2026-05-31 22:33:49] ERROR : Server error event:
+[2026-05-31 22:33:49] ERROR : Server error event:
+[2026-05-31 22:33:49] ERROR : Server error event:
+[2026-05-31 22:33:49] ERROR : Server error event:
+[2026-05-31 22:33:50] ERROR : Server error event:
+[2026-05-31 22:33:50] ERROR : Server error event:
+[2026-05-31 22:33:50] ERROR : Server error event:
+[2026-05-31 22:33:50] ERROR : Server error event:
+[2026-05-31 22:33:51] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
+[2026-05-31 22:34:10] ERROR : Server error event:
