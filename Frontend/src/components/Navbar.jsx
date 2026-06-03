@@ -16,7 +16,7 @@ import {
   Grid
 } from "lucide-react";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const { user, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
   const { cartItems } = useCart();
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
+  const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/shop?search=${encodeURIComponent(searchQuery.trim())}`);
@@ -37,7 +37,10 @@ const Navbar: React.FC = () => {
     navigate("/login");
   };
 
-  const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  const cartCount = cartItems.reduce(
+  (acc, item) => acc + (item.quantity || 1),
+  0
+);
 
   return (
     <nav className="glass navbar" style={{
@@ -155,7 +158,7 @@ const Navbar: React.FC = () => {
             <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
               <Link to="/profile" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <img 
-                  src={user.profileImageUrl || "https://res.cloudinary.com/demo/image/upload/default-avatar.png"} 
+                  src={user.profileImageUrl || "/default-avatar.png"} 
                   alt={user.firstName} 
                   style={{ width: "32px", height: "32px", borderRadius: "50%", objectFit: "cover", border: "2px solid var(--primary)" }}
                 />

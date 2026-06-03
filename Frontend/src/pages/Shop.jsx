@@ -4,8 +4,8 @@ import api from "../services/api";
 import { ProductCard } from "../components/ProductCard";
 import { Search, SlidersHorizontal, ChevronLeft, ChevronRight, X } from "lucide-react";
 
-export const Shop: React.FC = () => {
-  const [products, setProducts] = useState<any[]>([]);
+export const Shop = () => {
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -50,9 +50,11 @@ export const Shop: React.FC = () => {
         setTotalPages(res.data.totalPages || 1);
         setTotalProducts(res.data.totalProducts || 0);
       }
-    } catch (err) {
-      console.error("Error loading products:", err);
-    } finally {
+    }  catch (err) {
+  console.error("Error loading products:", err);
+  setProducts([]);
+}
+     finally {
       setLoading(false);
     }
   };

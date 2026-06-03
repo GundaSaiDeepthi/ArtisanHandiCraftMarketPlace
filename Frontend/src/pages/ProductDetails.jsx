@@ -7,14 +7,14 @@ import { useWishlist } from "../context/WishlistContext";
 import { useAuth } from "../context/AuthContext";
 import { ShoppingCart, Heart, Plus, Minus, MessageSquare, AlertCircle } from "lucide-react";
 
-export const ProductDetails: React.FC = () => {
-  const { productId } = useParams<{ productId: string }>();
+const ProductDetails = () => {
+  const { productId } = useParams();
   const { user } = useAuth();
   const { addToCart } = useCart();
   const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
-  const [product, setProduct] = useState<any>(null);
-  const [reviews, setReviews] = useState<any[]>([]);
+  const [product, setProduct] = useState(null);
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   
   // Cart quantity state
@@ -26,7 +26,7 @@ export const ProductDetails: React.FC = () => {
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
   const [submittingReview, setSubmittingReview] = useState(false);
-  const [reviewError, setReviewError] = useState<string | null>(null);
+  const [reviewError, setReviewError] = useState(null);
 
   const fetchProductAndReviews = async () => {
     try {
@@ -62,9 +62,9 @@ export const ProductDetails: React.FC = () => {
     }
     try {
       setCartAdding(true);
-      await addToCart(product._id, quantity);
+      await addToCart(product?._id, quantity);
       alert("Added to cart successfully!");
-    } catch (err: any) {
+    } catch (err) {
       alert(err.message || "Failed to add to cart");
     } finally {
       setCartAdding(false);
@@ -87,14 +87,14 @@ export const ProductDetails: React.FC = () => {
       } else {
         await addToWishlist(product._id);
       }
-    } catch (err: any) {
+    } catch (err) {
       alert(err.message || "Failed to update wishlist");
     } finally {
       setWishlistLoading(false);
     }
   };
 
-  const handleReviewSubmit = async (e: React.FormEvent) => {
+  const handleReviewSubmit = async (e) => {
     e.preventDefault();
     if (!comment.trim()) {
       setReviewError("Please write a comment.");
@@ -114,7 +114,7 @@ export const ProductDetails: React.FC = () => {
         // Refresh product rating stats and reviews list
         await fetchProductAndReviews();
       }
-    } catch (err: any) {
+    } catch (err) {
       setReviewError(err.response?.data?.message || "Failed to submit review.");
     } finally {
       setSubmittingReview(false);
@@ -288,7 +288,10 @@ export const ProductDetails: React.FC = () => {
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                       <img
-                        src={rev.user?.profileImageUrl || "https://res.cloudinary.com/demo/image/upload/default-avatar.png"}
+                        src={
+  rev.user?.profileImageUrl ||
+  "https://via.placeholder.com/150"
+}
                         alt={rev.user?.firstName || "Customer"}
                         style={{ width: "36px", height: "36px", borderRadius: "50%", objectFit: "cover" }}
                       />

@@ -6,27 +6,7 @@ import { useWishlist } from "../context/WishlistContext";
 import { useAuth } from "../context/AuthContext";
 import { StarRating } from "./StarRating";
 
-export interface ProductCardProps {
-  product: {
-    _id: string;
-    title: string;
-    description: string;
-    price: number;
-    image: string;
-    category: string;
-    stock: number;
-    rating: number;
-    reviewsCount: number;
-    isAvailable: boolean;
-    artisan?: {
-      _id: string;
-      firstName: string;
-      lastName: string;
-    };
-  };
-}
-
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard = ({ product }) => {
   const { user } = useAuth();
   const { addToCart } = useCart();
   const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
@@ -35,7 +15,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   const favorited = isInWishlist(product._id);
 
-  const handleCartClick = async (e: React.MouseEvent) => {
+  const handleCartClick = async (e) => {
     e.preventDefault();
     if (!user) {
       alert("Please login to add products to your cart!");
@@ -48,14 +28,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     try {
       setAdding(true);
       await addToCart(product._id, 1);
-    } catch (err: any) {
+    } catch (err) {
       alert(err.message || "Failed to add to cart");
     } finally {
       setAdding(false);
     }
   };
 
-  const handleWishlistClick = async (e: React.MouseEvent) => {
+  const handleWishlistClick = async (e) => {
     e.preventDefault();
     if (!user) {
       alert("Please login to save products to your wishlist!");
@@ -72,7 +52,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       } else {
         await addToWishlist(product._id);
       }
-    } catch (err: any) {
+    } catch (err) {
       alert(err.message || "Failed to update wishlist");
     } finally {
       setWishlistLoading(false);
@@ -95,7 +75,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         overflow: "hidden"
       }}>
         <img
-          src={product.image || "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=500&q=80"}
+          src={product.image || "/default-product.png"}
           alt={product.title}
           style={{
             position: "absolute",
@@ -227,7 +207,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             fontWeight: 800,
             color: "var(--foreground)"
           }}>
-            ₹{product.price.toLocaleString("en-IN")}
+            ₹{(product.price || 0).toLocaleString("en-IN")}
           </span>
 
           {(!user || user.role === "USER") && (
@@ -261,3 +241,4 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     </div>
   );
 };
+export default ProductCard;

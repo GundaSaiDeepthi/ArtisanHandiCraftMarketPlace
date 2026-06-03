@@ -3,9 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { UserPlus, Mail, Key, User, Phone, Briefcase, FileText, Camera, AlertCircle } from "lucide-react";
 
-export const Register: React.FC = () => {
+export const Register = () => {
   const { registerUser, registerArtisan, error, clearError } = useAuth();
-  const [role, setRole] = useState<"USER" | "ARTISAN">("USER");
+  const [role, setRole] = useState("USER");
 
   // Form states
   const [firstName, setFirstName] = useState("");
@@ -20,14 +20,14 @@ export const Register: React.FC = () => {
   const [artisanExperience, setArtisanExperience] = useState("");
 
   // Profile image
-  const [profileImage, setProfileImage] = useState<File | null>(null);
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [profileImage, setProfileImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
 
   const [loading, setLoading] = useState(false);
-  const [localError, setLocalError] = useState<string | null>(null);
+  const [localError, setLocalError] = useState(null);
   const navigate = useNavigate();
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       setProfileImage(file);
@@ -35,7 +35,7 @@ export const Register: React.FC = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!firstName || !email || !password) {
       setLocalError("Please fill in all required fields.");
@@ -73,9 +73,13 @@ export const Register: React.FC = () => {
 
       // Successful registration -> go verify email OTP!
       navigate(`/verify-otp?email=${encodeURIComponent(email.toLowerCase().trim())}`);
-    } catch (err: any) {
-      setLocalError(err.message || "Registration failed.");
-    } finally {
+    } catch (err) {
+  setLocalError(
+    err?.response?.data?.message ||
+    err?.message ||
+    "Registration failed."
+  );
+} finally {
       setLoading(false);
     }
   };
