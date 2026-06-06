@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import { SocketProvider } from "./context/SocketContext";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -14,6 +16,16 @@ import Checkout from "./pages/Checkout";
 import AdminOrders from "./pages/AdminOrders";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import VerifyOTP from "./pages/VerifyOTP";
+import MyOrders from "./pages/MyOrders";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import ArtisanDashboard from "./pages/artisan/ArtisanDashboard";
+import ArtisanOrders from "./pages/artisan/ArtisanOrders";
+import MyProducts from "./pages/artisan/MyProducts";
+import AddProduct from "./pages/artisan/AddProduct";
+import EditProduct from "./pages/artisan/EditProduct";
+import SalesReport from "./pages/artisan/SalesReport";
 
 const ProtectedRoute = ({ children, requiredRole }) => {
   const { user, loading } = useAuth();
@@ -38,8 +50,14 @@ const AppContent = () => {
     <Router>
       <Navbar />
 
-      <main style={{ padding: "1rem" }}>
+      <main
+        style={{
+          padding: "1rem",
+          minHeight: "80vh",
+        }}
+      >
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<Home />} />
 
           <Route path="/shop" element={<Shop />} />
@@ -50,6 +68,64 @@ const AppContent = () => {
           />
 
           <Route
+            path="/login"
+            element={<Login />}
+          />
+
+          <Route
+            path="/register"
+            element={<Register />}
+          />
+
+          <Route
+            path="/verify-otp"
+            element={<VerifyOTP />}
+          />
+          <Route
+  path="/forgot-password"
+  element={<ForgotPassword />}
+/>
+
+<Route
+  path="/reset-password"
+  element={<ResetPassword />}
+/>
+
+          <Route
+  path="/my-orders"
+  element={
+    <ProtectedRoute requiredRole="USER">
+      <MyOrders />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/artisan/dashboard"
+  element={<ArtisanDashboard />}
+/>
+<Route
+  path="/artisan/orders"
+  element={<ArtisanOrders />}
+/>
+<Route
+  path="/artisan/products"
+  element={<MyProducts />}
+/>
+<Route
+  path="/artisan/add-product"
+  element={<AddProduct />}
+/>
+<Route
+  path="/artisan/edit-product/:productId"
+  element={<EditProduct />}
+/>
+<Route
+  path="/artisan/sales-report"
+  element={<SalesReport />}
+/>
+          {/* User Routes */}
+          <Route
             path="/checkout"
             element={
               <ProtectedRoute requiredRole="USER">
@@ -58,6 +134,7 @@ const AppContent = () => {
             }
           />
 
+          {/* Admin Routes */}
           <Route
             path="/admin/orders"
             element={
@@ -67,9 +144,11 @@ const AppContent = () => {
             }
           />
 
-          <Route path="/login" element={<Login />} />
-
-          <Route path="/register" element={<Register />} />
+          {/* Fallback */}
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
         </Routes>
       </main>
 
@@ -82,11 +161,13 @@ function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <CartProvider>
-          <WishlistProvider>
-            <AppContent />
-          </WishlistProvider>
-        </CartProvider>
+        <SocketProvider>
+          <CartProvider>
+            <WishlistProvider>
+              <AppContent />
+            </WishlistProvider>
+          </CartProvider>
+        </SocketProvider>
       </AuthProvider>
     </ThemeProvider>
   );

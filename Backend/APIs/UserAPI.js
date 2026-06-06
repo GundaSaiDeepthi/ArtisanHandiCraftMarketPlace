@@ -7,7 +7,10 @@ import crypto from "crypto";
 import {
   authenticate,
   register,
-} from "../services/authService.js";
+  forgotPassword,
+  resetPassword
+}
+from "../services/authService.js";
 
 import { sendEmail }
 from "../utils/sendEmail.js";
@@ -119,14 +122,8 @@ userRoute.post(
           );
       }
 
-      /*
-      ==================================
-      GENERATE OTP
-      ==================================
-      */
-
-      const otp =
-        generateOTP();
+      
+  
 
       /*
       ==================================
@@ -143,6 +140,7 @@ userRoute.post(
 
     profileImageUrl:
       cloudinaryResult?.secure_url,
+       
 });
       
 
@@ -379,9 +377,11 @@ userRoute.post(
       user.emailOTP =
         otp;
 
-      user.otpExpiry =
-        Date.now() +
-        10 * 60 * 1000;
+     user.otpExpiry =
+  new Date(
+    Date.now() +
+    10 * 60 * 1000
+  );
 
       await user.save();
 
@@ -1450,6 +1450,15 @@ userRoute.post(
         rating,
         comment,
       } = req.body;
+      if (
+  rating < 1 ||
+  rating > 5
+) {
+  return res.status(400).json({
+    success:false,
+    message:"Rating must be between 1 and 5"
+  });
+}
 
       const existingReview =
         await ReviewModel.findOne({
@@ -1930,3 +1939,4 @@ userRoute.post(
     }
   }
 );
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { LogIn, Key, Mail, AlertCircle } from "lucide-react";
@@ -9,21 +9,27 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [localError, setLocalError] = useState(null);
+  const [localError, setLocalError] = useState("");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    clearError();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (loading) return;
+
     if (!email || !password) {
-      setLocalError("Please fill in all fields.");
+      setLocalError("Please enter email and password.");
       return;
     }
 
     try {
       setLoading(true);
-      setLocalError(null);
+      setLocalError("");
       clearError();
 
       const userData = await login({
@@ -31,17 +37,30 @@ const Login = () => {
         password,
       });
 
-      if (userData?.role === "ARTISAN") {
-        navigate("/artisan");
-      } else if (userData?.role === "ADMIN") {
+      if (userData?.role === "ADMIN") {
         navigate("/admin");
+      } else if (userData?.role === "ARTISAN") {
+        navigate("/artisan");
       } else {
         navigate("/");
       }
     } catch (err) {
-      setLocalError(
-        err.message || "Invalid credentials"
-      );
+      const message =
+        err.message || "Login failed";
+
+      setLocalError(message);
+
+      if (
+        message
+          .toLowerCase()
+          .includes("verify your email")
+      ) {
+        navigate(
+          `/verify-otp?email=${encodeURIComponent(
+            email
+          )}`
+        );
+      }
     } finally {
       setLoading(false);
     }
@@ -75,8 +94,7 @@ const Login = () => {
           <h2
             style={{
               fontSize: "1.75rem",
-              fontFamily:
-                "var(--font-display)",
+              fontFamily: "var(--font-display)",
               fontWeight: 800,
             }}
           >
@@ -85,13 +103,11 @@ const Login = () => {
 
           <p
             style={{
-              color:
-                "var(--muted-foreground)",
+              color: "var(--muted-foreground)",
               fontSize: "0.9rem",
             }}
           >
-            Log in to access your unique artisan
-            crafts
+            Log in to access your artisan marketplace
           </p>
         </div>
 
@@ -104,19 +120,15 @@ const Login = () => {
               gap: "0.5rem",
               width: "100%",
               padding: "0.75rem 1rem",
-              borderRadius:
-                "var(--radius-lg)",
+              borderRadius: "var(--radius-lg)",
               fontSize: "0.85rem",
               marginBottom: "1.5rem",
-              whiteSpace: "normal",
               lineHeight: 1.4,
             }}
           >
             <AlertCircle
               size={16}
-              style={{
-                flexShrink: 0,
-              }}
+              style={{ flexShrink: 0 }}
             />
             <span>
               {localError || error}
@@ -132,10 +144,7 @@ const Login = () => {
             gap: "1.25rem",
           }}
         >
-          <div
-            className="form-group"
-            style={{ margin: 0 }}
-          >
+          <div className="form-group">
             <label className="form-label">
               Email Address
             </label>
@@ -174,10 +183,7 @@ const Login = () => {
             </div>
           </div>
 
-          <div
-            className="form-group"
-            style={{ margin: 0 }}
-          >
+          <div className="form-group">
             <div
               style={{
                 display: "flex",
@@ -187,10 +193,7 @@ const Login = () => {
                 marginBottom: "0.375rem",
               }}
             >
-              <label
-                className="form-label"
-                style={{ margin: 0 }}
-              >
+              <label className="form-label">
                 Password
               </label>
 
@@ -198,12 +201,11 @@ const Login = () => {
                 to="/forgot-password"
                 style={{
                   fontSize: "0.8rem",
-                  color:
-                    "var(--primary)",
+                  color: "var(--primary)",
                   fontWeight: 500,
                 }}
               >
-                Forgot password?
+                Forgot Password?
               </Link>
             </div>
 
@@ -257,7 +259,7 @@ const Login = () => {
             <LogIn size={18} />
 
             {loading
-              ? "Logging in..."
+              ? "Logging In..."
               : "Log In"}
           </button>
         </form>

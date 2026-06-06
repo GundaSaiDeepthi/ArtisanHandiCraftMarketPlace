@@ -8,6 +8,11 @@ import { UserTypeModel }
 
 from "../models/UserModel.js";
 
+import {
+  sendOTPEmail,
+  sendResetPasswordEmail,
+} from "../utils/sendEmail.js";
+
 
 
 
@@ -49,14 +54,9 @@ GENERATE EMAIL OTP
 */
 
 export const generateOTP = () => {
-
-  return Math.floor(
-
-    100000 +
-
-    Math.random() * 900000
-
-  ).toString();
+  return crypto
+    .randomInt(100000, 1000000)
+    .toString();
 };
 
 /*
@@ -157,6 +157,26 @@ export const register =
       throw err;
     }
 
+    if (userObj.phoneNumber) {
+
+  const existingPhone =
+    await UserTypeModel.findOne({
+      phoneNumber:
+        userObj.phoneNumber,
+    });
+
+  if (existingPhone) {
+
+    const err = new Error(
+      "Phone number already exists"
+    );
+
+    err.status = 409;
+
+    throw err;
+  }
+}
+
     const allowedRoles = [
   "USER",
   "ARTISAN"
@@ -176,6 +196,23 @@ if (
   err.status = 400;
 
   throw err;
+}
+
+if (role === "ARTISAN") {
+
+  if (
+    !userObj.artisanBio ||
+    !userObj.artisanSpecialization
+  ) {
+
+    const err = new Error(
+      "Artisan Bio and Specialization are required"
+    );
+
+    err.status = 400;
+
+    throw err;
+  }
 }
 
     /*
@@ -228,18 +265,45 @@ if (
     ==================================
     */
 
-   const userData = {
+ const userData = {
   firstName: userObj.firstName,
   lastName: userObj.lastName || "",
+
   email: normalizedEmail,
+
   password: hashedPassword,
 
   role,
 
-  profileImageUrl: userObj.profileImageUrl || "",
+  phoneNumber:
+    userObj.phoneNumber || "",
+
+  profileImageUrl:
+    userObj.profileImageUrl || "",
+
+  artisanBio:
+    role === "ARTISAN"
+      ? userObj.artisanBio || ""
+      : "",
+
+  artisanSpecialization:
+    role === "ARTISAN"
+      ? userObj.artisanSpecialization || ""
+      : "",
+
+  artisanExperience:
+    role === "ARTISAN"
+      ? Number(
+          userObj.artisanExperience || 0
+        )
+      : 0,
+
   isEmailVerified: false,
+
   emailOTP: otp,
+
   otpExpiry,
+
   isActive: true,
 };
 
@@ -268,8 +332,19 @@ if (
     ==================================
     */
 
-    const createdUser =
-      await userDoc.save();
+  const createdUser =
+  await userDoc.save();
+
+/*
+==================================
+SEND OTP EMAIL
+==================================
+*/
+
+await sendOTPEmail(
+  normalizedEmail,
+  otp
+);
 
     /*
     ==================================
@@ -298,12 +373,12 @@ if (
     */
 
     return {
-
-      user:
-        userResponse,
-
-      otp,
-    };
+  success: true,
+  user: userResponse,
+  otp,
+   message:
+    "Registration successful. OTP sent to your email.",
+};
   };
 
 /*
@@ -542,9 +617,24 @@ export const resendOTP =
 
     await user.save();
 
-    return {
-      otp,
-    };
+    await user.save();
+
+/*
+==================================
+SEND OTP EMAIL
+==================================
+*/
+
+await sendOTPEmail(
+  user.email,
+  otp
+);
+
+return {
+  success: true,
+  message:
+    "OTP sent successfully",
+};
   };
 
 /*
@@ -616,12 +706,27 @@ export const authenticate =
       throw err;
     }
 
-    /*
+  
+ /*
+    ==================================
+    BLOCKED ACCOUNT
+    ==================================
+    */
+   if (user.isActive === false) {
+
+  const err = new Error(
+    "Your account is blocked. Contact admin."
+  );
+
+  err.status = 403;
+
+  throw err;
+}
+      /*
     ==================================
     EMAIL NOT VERIFIED
     ==================================
     */
-
     if (
       !user.isEmailVerified
     ) {
@@ -637,26 +742,8 @@ export const authenticate =
       throw err;
     }
 
-    /*
-    ==================================
-    BLOCKED ACCOUNT
-    ==================================
-    */
+   
 
-    if (
-      user.isActive === false
-    ) {
-
-      const err = new Error(
-
-        "Your account is blocked. Contact admin."
-
-      );
-
-      err.status = 403;
-
-      throw err;
-    }
 
     /*
     ==================================
@@ -808,14 +895,10 @@ export const forgotPassword =
 
     if (!user) {
 
-      const err = new Error(
-        "User not found"
-      );
-
-      err.status = 404;
-
-      throw err;
-    }
+  return {
+    success: true,
+  };
+}
 
     /*
     ==================================
@@ -841,12 +924,33 @@ export const forgotPassword =
 
     await user.save();
 
-    return {
+   await user.save();
 
-      resetToken,
+/*
+==================================
+GENERATE RESET LINK
+==================================
+*/
 
-      user,
-    };
+const resetLink =
+`${process.env.CLIENT_URL}/reset-password?token=${resetToken}`;
+
+/*
+==================================
+SEND RESET EMAIL
+==================================
+*/
+
+await sendResetPasswordEmail(
+  user.email,
+  resetLink
+);
+
+return {
+  success: true,
+  message:
+    "Password reset link sent to email",
+};
   };
 
 /*
@@ -917,18 +1021,30 @@ export const resetPassword =
         },
       });
 
-    if (!user) {
+   
+if (!user) {
 
-      const err = new Error(
+  const err = new Error(
+    "Invalid or expired reset token"
+  );
 
-        "Invalid or expired reset token"
+  err.status = 400;
 
-      );
+  throw err;
+}
 
-      err.status = 400;
+if (
+  !user.isEmailVerified
+) {
 
-      throw err;
-    }
+  const err = new Error(
+    "Email not verified"
+  );
+
+  err.status = 400;
+
+  throw err;
+}
 
     /*
     ==================================

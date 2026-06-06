@@ -1,0 +1,239 @@
+####################################################
+### BASE URL
+####################################################
+
+@baseUrl = http://localhost:5000
+
+####################################################
+### REGISTER USER
+####################################################
+
+POST {{baseUrl}}/auth-api/register
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@gmail.com",
+  "password": "123456",
+  "role": "USER"
+}
+
+####################################################
+### LOGIN
+####################################################
+
+POST {{baseUrl}}/auth-api/login
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "123456"
+}
+
+####################################################
+### REGISTER ARTISAN
+####################################################
+
+POST {{baseUrl}}/artisan-api/users
+Content-Type: multipart/form-data
+
+####################################################
+### GET ALL PRODUCTS
+####################################################
+
+GET {{baseUrl}}/artisan-api/products
+
+####################################################
+### SEARCH PRODUCTS
+####################################################
+
+GET {{baseUrl}}/artisan-api/products?search=pottery
+
+####################################################
+### FILTER PRODUCTS
+####################################################
+
+GET {{baseUrl}}/artisan-api/products?category=Jewelry
+
+####################################################
+### PRICE FILTER
+####################################################
+
+GET {{baseUrl}}/artisan-api/products?minPrice=100&maxPrice=1000
+
+####################################################
+### SORT PRODUCTS
+####################################################
+
+GET {{baseUrl}}/artisan-api/products?sort=price_asc
+
+####################################################
+### GET SINGLE PRODUCT
+####################################################
+
+GET {{baseUrl}}/artisan-api/products/PRODUCT_ID
+
+####################################################
+### MY PRODUCTS
+####################################################
+
+GET {{baseUrl}}/artisan-api/my-products
+Authorization: Bearer YOUR_TOKEN
+
+####################################################
+### ADD PRODUCT
+####################################################
+
+POST {{baseUrl}}/artisan-api/products
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "title": "Wooden Bowl",
+  "description": "Handmade wooden bowl",
+  "price": 500,
+  "category": "Wood Craft",
+  "stock": 10
+}
+
+####################################################
+### UPDATE PRODUCT
+####################################################
+
+PUT {{baseUrl}}/artisan-api/products/PRODUCT_ID
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "title": "Updated Bowl",
+  "description": "Updated description",
+  "price": 700,
+  "category": "Wood Craft",
+  "stock": 15
+}
+
+####################################################
+### DISABLE PRODUCT
+####################################################
+
+PATCH {{baseUrl}}/artisan-api/products/PRODUCT_ID/status
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "isAvailable": false
+}
+
+####################################################
+### ENABLE PRODUCT
+####################################################
+
+PATCH {{baseUrl}}/artisan-api/products/PRODUCT_ID/status
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "isAvailable": true
+}
+
+####################################################
+### ARTISAN DASHBOARD
+####################################################
+
+GET {{baseUrl}}/artisan-api/dashboard
+Authorization: Bearer YOUR_TOKEN
+
+####################################################
+### ARTISAN ORDERS
+####################################################
+
+GET {{baseUrl}}/artisan-api/orders
+Authorization: Bearer YOUR_TOKEN
+
+####################################################
+### SALES REPORT
+####################################################
+
+GET {{baseUrl}}/artisan-api/sales-report
+Authorization: Bearer YOUR_TOKEN
+
+####################################################
+### GET CART
+####################################################
+
+GET {{baseUrl}}/cart-api
+Authorization: Bearer YOUR_TOKEN
+
+####################################################
+### ADD TO CART
+####################################################
+
+POST {{baseUrl}}/cart-api
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "productId": "PRODUCT_ID",
+  "quantity": 1
+}
+
+####################################################
+### CREATE ORDER
+####################################################
+
+POST {{baseUrl}}/order-api
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "products": [
+    {
+      "product": "PRODUCT_ID",
+      "quantity": 2
+    }
+  ],
+  "totalAmount": 1000
+}
+
+####################################################
+### MY ORDERS
+####################################################
+
+GET {{baseUrl}}/order-api
+Authorization: Bearer YOUR_TOKEN
+
+####################################################
+### ADMIN DASHBOARD
+####################################################
+
+GET {{baseUrl}}/admin-api/dashboard
+Authorization: Bearer YOUR_ADMIN_TOKEN
+
+####################################################
+### GET ALL USERS
+####################################################
+
+GET {{baseUrl}}/admin-api/users
+Authorization: Bearer YOUR_ADMIN_TOKEN
+
+####################################################
+### GET ALL ARTISANS
+####################################################
+
+GET {{baseUrl}}/admin-api/artisans
+Authorization: Bearer YOUR_ADMIN_TOKEN
+
+####################################################
+### APPROVE ARTISAN
+####################################################
+
+PATCH {{baseUrl}}/admin-api/artisans/ARTISAN_ID/approve
+Authorization: Bearer YOUR_ADMIN_TOKEN
+
+####################################################
+### REJECT ARTISAN
+####################################################
+
+PATCH {{baseUrl}}/admin-api/artisans/ARTISAN_ID/reject
+Authorization: Bearer YOUR_ADMIN_TOKEN

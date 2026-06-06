@@ -3,155 +3,147 @@ import { config } from "dotenv";
 
 config();
 
-export const verifyToken =
-  (...allowedRoles) => {
+export const verifyToken = (...allowedRoles) => {
+  return async (req, res, next) => {
+    try {
+      /*
+      ====================================
+      GET TOKEN
+      ====================================
+      */
 
-    return async (
-      req,
-      res,
-      next
-    ) => {
+      const authHeader =
+        req.headers.authorization ||
+        req.headers.Authorization;
 
-      try {
+      let token = null;
 
-        /*
-        ====================================
-        GET TOKEN
-        ====================================
-        */
+      // From Authorization header
+      if (
+        authHeader &&
+        authHeader.startsWith("Bearer ")
+      ) {
+        token = authHeader.split(" ")[1];
+      }
 
-        const authHeader =
-          req.headers.authorization ||
-          req.headers.Authorization;
+      // From Cookies
+      if (!token && req.cookies?.token) {
+        token = req.cookies.token;
+      }
 
-        const bearerToken = authHeader
-          ? authHeader.split(" ")[1]
-          : null;
+      /*
+      ====================================
+      TOKEN CHECK
+      ====================================
+      */
 
-        const token =
-          req.cookies?.token ||
-          bearerToken;
-
-        /*
-        ====================================
-        TOKEN CHECK
-        ====================================
-        */
-
-        if (!token) {
-
-          return res.status(401).json({
-
-            success: false,
-
-            message:
-              "Unauthorized. Please login",
-          });
-        }
-
-        /*
-        ====================================
-        VERIFY TOKEN
-        ====================================
-        */
-
-        const decodedToken =
-          jwt.verify(
-            token,
-            process.env.JWT_SECRET
-          );
-
-        /*
-        ====================================
-        ROLE CHECK
-        ====================================
-        */
-
-        if (
-
-          allowedRoles.length > 0 &&
-
-          !allowedRoles.includes(
-            decodedToken.role
-          )
-
-        ) {
-
-          return res.status(403).json({
-
-            success: false,
-
-            message:
-              "Forbidden. Access denied",
-          });
-        }
-
-        /*
-        ====================================
-        ATTACH USER
-        ====================================
-        */
-
-        req.user =
-          decodedToken;
-
-        next();
-
-      } catch (err) {
-
-        /*
-        ====================================
-        TOKEN EXPIRED
-        ====================================
-        */
-
-        if (
-          err.name ===
-          "TokenExpiredError"
-        ) {
-
-          return res.status(401).json({
-
-            success: false,
-
-            message:
-              "Session expired. Please login again",
-          });
-        }
-
-        /*
-        ====================================
-        INVALID TOKEN
-        ====================================
-        */
-
-        if (
-          err.name ===
-          "JsonWebTokenError"
-        ) {
-
-          return res.status(401).json({
-
-            success: false,
-
-            message:
-              "Invalid token",
-          });
-        }
-
-        /*
-        ====================================
-        SERVER ERROR
-        ====================================
-        */
-
-        return res.status(500).json({
-
+      if (!token) {
+        return res.status(401).json({
           success: false,
-
-          message:
-            "Internal server error",
+          message: "Unauthorized. Please login",
         });
       }
-    };
+
+      /*
+      ====================================
+      JWT SECRET CHECK
+      ====================================
+      */
+
+      if (!process.env.JWT_SECRET) {
+        return res.status(500).json({
+          success: false,
+          message: "JWT_SECRET is missing",
+        });
+      }
+
+      /*
+      ====================================
+      VERIFY TOKEN
+      ====================================
+      */
+
+      const decodedToken = jwt.verify(
+        token,
+        process.env.JWT_SECRET
+      );
+
+      /*
+      ====================================
+      ROLE CHECK
+      ====================================
+      */
+
+      if (
+        allowedRoles.length > 0 &&
+        !allowedRoles.includes(
+          decodedToken.role
+        )
+      ) {
+        return res.status(403).json({
+          success: false,
+          message: "Forbidden. Access denied",
+        });
+      }
+
+      /*
+      ====================================
+      ATTACH USER TO REQUEST
+      ====================================
+      */
+
+      req.user = decodedToken;
+
+      next();
+    } catch (err) {
+      /*
+      ====================================
+      TOKEN EXPIRED
+      ====================================
+      */
+
+      if (
+        err.name ===
+        "TokenExpiredError"
+      ) {
+        return res.status(401).json({
+          success: false,
+          message:
+            "Session expired. Please login again",
+        });
+      }
+
+      /*
+      ====================================
+      INVALID TOKEN
+      ====================================
+      */
+
+      if (
+        err.name ===
+        "JsonWebTokenError"
+      ) {
+        return res.status(401).json({
+          success: false,
+          message: "Invalid token",
+        });
+      }
+
+      console.error(
+        "Verify Token Error:",
+        err
+      );
+
+      /*
+      ====================================
+      SERVER ERROR
+      ====================================
+      */
+
+      return res.status(500).json({
+        success: false,
+        message: "Internal server error",
+      });
+    }
   };
+};

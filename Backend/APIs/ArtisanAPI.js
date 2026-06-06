@@ -22,6 +22,9 @@ import {
   uploadToCloudinary,
 } from "../config/cloudinaryUpload.js";
 
+import { OrderModel }
+from "../models/OrderModel.js";
+
 export const artisanRoute =
   exp.Router();
 
@@ -781,6 +784,333 @@ artisanRoute.patch(
 
     } catch (err) {
 
+      next(err);
+    }
+  }
+);
+
+artisanRoute.get(
+
+  "/dashboard",
+
+  verifyToken("ARTISAN"),
+
+  async (req, res, next) => {
+
+    try {
+
+      const artisanId =
+        req.user.userId;
+
+      /*
+      ============================
+      TOTAL PRODUCTS
+      ============================
+      */
+
+      const totalProducts =
+        await ProductModel.countDocuments({
+
+          artisan: artisanId,
+
+          isAvailable: true
+        });
+
+      /*
+      ============================
+      GET ARTISAN PRODUCTS
+      ============================
+      */
+
+      const artisanProducts =
+        await ProductModel.find({
+
+          artisan: artisanId
+
+        }).select("_id");
+
+      const productIds =
+        artisanProducts.map(
+          product => product._id
+        );
+
+      /*
+      ============================
+      FIND ORDERS
+      ============================
+      */
+
+      const orders =
+        await OrderModel.find({
+
+          "products.product": {
+            $in: productIds
+          }
+
+        })
+
+        .populate(
+          "products.product"
+        );
+
+      /*
+      ============================
+      CALCULATE STATS
+      ============================
+      */
+
+      let totalOrders = 0;
+
+      let totalSales = 0;
+
+      let totalRevenue = 0;
+
+      orders.forEach(order => {
+
+        totalOrders++;
+
+        totalRevenue +=
+          order.totalAmount;
+
+        order.products.forEach(item => {
+
+          if (
+
+            item.product &&
+
+            productIds.some(
+              id =>
+                id.toString() ===
+                item.product._id.toString()
+            )
+
+          ) {
+
+            totalSales +=
+              item.quantity;
+          }
+        });
+      });
+
+      /*
+      ============================
+      RESPONSE
+      ============================
+      */
+
+      res.status(200).json({
+
+        success: true,
+
+        payload: {
+
+          totalProducts,
+
+          totalOrders,
+
+          totalSales,
+
+          totalRevenue
+        }
+      });
+
+    }
+
+    catch (err) {
+
+      next(err);
+    }
+  }
+);
+
+/*
+====================================================
+GET ORDERS OF LOGGED-IN ARTISAN
+GET => /artisan-api/orders
+====================================================
+*/
+
+artisanRoute.get(
+
+  "/orders",
+
+  verifyToken("ARTISAN"),
+
+  async (req, res, next) => {
+
+    try {
+
+      const artisanId =
+        req.user.userId;
+
+      /*
+      ====================================
+      GET ARTISAN PRODUCTS
+      ====================================
+      */
+
+      const artisanProducts =
+        await ProductModel.find({
+
+          artisan: artisanId
+
+        }).select("_id");
+
+      const productIds =
+        artisanProducts.map(
+          product => product._id
+        );
+
+      /*
+      ====================================
+      FIND ORDERS
+      ====================================
+      */
+
+      const orders =
+        await OrderModel.find({
+
+          "products.product": {
+            $in: productIds
+          }
+
+        })
+
+        .populate(
+          "user",
+          "firstName lastName email"
+        )
+
+        .populate(
+          "products.product",
+          "title price image artisan"
+        )
+
+        .sort({
+          createdAt: -1
+        });
+
+      /*
+      ====================================
+      KEEP ONLY THIS ARTISAN'S PRODUCTS
+      ====================================
+      */
+
+      const filteredOrders =
+        orders.map(order => {
+
+          const artisanItems =
+            order.products.filter(item =>
+
+              item.product &&
+
+              item.product.artisan.toString()
+              === artisanId
+
+            );
+
+          return {
+
+            _id:
+              order._id,
+
+            user:
+              order.user,
+
+            products:
+              artisanItems,
+
+            totalAmount:
+              order.totalAmount,
+
+            paymentStatus:
+              order.paymentStatus,
+
+            orderStatus:
+              order.orderStatus,
+
+            createdAt:
+              order.createdAt
+          };
+        });
+
+      res.status(200).json({
+
+        success: true,
+
+        totalOrders:
+          filteredOrders.length,
+
+        payload:
+          filteredOrders
+      });
+
+    }
+
+    catch (err) {
+
+      next(err);
+    }
+  }
+);
+artisanRoute.get(
+  "/sales-report",
+  verifyToken("ARTISAN"),
+  async (req, res, next) => {
+    try {
+      const artisanId = req.user.userId;
+
+      const products = await ProductModel.find({
+        artisan: artisanId,
+      }).select("_id title price");
+
+      const productIds = products.map(
+        (product) => product._id
+      );
+
+      const orders = await OrderModel.find({
+        "products.product": {
+          $in: productIds,
+        },
+      }).populate(
+        "products.product",
+        "title price"
+      );
+
+      const report = [];
+
+      orders.forEach((order) => {
+        order.products.forEach((item) => {
+          if (
+            item.product &&
+            productIds.some(
+              (id) =>
+                id.toString() ===
+                item.product._id.toString()
+            )
+          ) {
+            report.push({
+              productName:
+                item.product.title,
+              quantity:
+                item.quantity,
+              price:
+                item.product.price,
+              total:
+                item.quantity *
+                item.product.price,
+              orderDate:
+                order.createdAt,
+            });
+          }
+        });
+      });
+
+      res.status(200).json({
+        success: true,
+        payload: report,
+      });
+    } catch (err) {
       next(err);
     }
   }

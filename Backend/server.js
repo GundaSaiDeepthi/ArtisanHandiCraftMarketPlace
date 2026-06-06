@@ -273,7 +273,7 @@ CORS CONFIGURATION
 */
 
 const allowedOrigins = [
-  "http://localhost:5173",
+  "https://artisan-handi-craft-market-place.vercel.app",
   process.env.CLIENT_URL,
 ].filter(Boolean);
 

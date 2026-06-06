@@ -19,9 +19,9 @@ const Checkout = () => {
     setError(null);
 
     try {
-      // Create Mock Order
+      // Create Razorpay Order
       const createRes = await api.post(
-        "/mock-payment-api/mock-create-order",
+        "/payment-api/create-order",
         {
           products: cartItems.map((item) => ({
             product: item.product?._id,
@@ -31,23 +31,75 @@ const Checkout = () => {
         }
       );
 
-      const orderId = createRes.data.payload.orderId;
+      const order = createRes.data.payload;
 
-      // Verify Mock Payment
-      await api.post(
-        "/mock-payment-api/mock-verify-payment",
-        {
-          orderId,
-        }
-      );
+      const options = {
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
 
-      clearCart();
+        amount: order.amount,
 
-      navigate("/");
+        currency: order.currency,
+
+        name: "Artisan Marketplace",
+
+        description: "Handicraft Purchase",
+
+        order_id: order.id,
+
+        handler: async function (response) {
+          try {
+            await api.post(
+              "/payment-api/verify-payment",
+              {
+                razorpay_order_id:
+                  response.razorpay_order_id,
+
+                razorpay_payment_id:
+                  response.razorpay_payment_id,
+
+                razorpay_signature:
+                  response.razorpay_signature,
+
+                products: cartItems.map((item) => ({
+                  product: item.product?._id,
+                  quantity: item.quantity,
+                })),
+
+                totalAmount,
+              }
+            );
+
+            clearCart();
+
+            alert("Payment Successful!");
+
+            navigate("/");
+          } catch (err) {
+            console.error(err);
+
+            alert("Payment Verification Failed");
+          }
+        },
+
+        prefill: {
+          name: "Customer",
+          email: "customer@example.com",
+        },
+
+        theme: {
+          color: "#3399cc",
+        },
+      };
+
+      const razorpay = new window.Razorpay(options);
+
+      razorpay.open();
     } catch (err) {
+      console.error(err);
+
       setError(
         err.response?.data?.message ||
-          "Checkout failed"
+          "Checkout Failed"
       );
     } finally {
       setLoading(false);
@@ -64,7 +116,7 @@ const Checkout = () => {
       <h1>Checkout</h1>
 
       {error && (
-        <p className="error">
+        <p style={{ color: "red" }}>
           {error}
         </p>
       )}
@@ -92,13 +144,12 @@ const Checkout = () => {
           </h2>
 
           <button
-            className="primary"
             onClick={handlePlaceOrder}
             disabled={loading}
           >
             {loading
               ? "Processing..."
-              : "Place Order"}
+              : "Pay Now"}
           </button>
         </>
       )}

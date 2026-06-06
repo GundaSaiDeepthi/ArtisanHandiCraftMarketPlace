@@ -80,7 +80,7 @@ commonRouter.post(
         {
           httpOnly: true,
 
-          secure: false,
+          secure: process.env.NODE_ENV === "production",
 
           sameSite: "lax",
 
@@ -144,7 +144,7 @@ commonRouter.get(
       {
         httpOnly: true,
 
-        secure: false,
+        secure: process.env.NODE_ENV === "production",
 
         sameSite: "lax",
 
