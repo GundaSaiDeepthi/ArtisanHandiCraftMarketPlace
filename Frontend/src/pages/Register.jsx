@@ -3,48 +3,72 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import {
   UserPlus,
-  Mail,
-  Key,
   User,
-  Phone,
   Briefcase,
-  FileText,
+  Mail,
+  Phone,
+  Key,
   Camera,
   AlertCircle,
+  FileText,
 } from "lucide-react";
 
 const Register = () => {
-  const { registerUser, registerArtisan, error, clearError } = useAuth();
-
-  const [role, setRole] = useState("USER");
-
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-
-  const [artisanBio, setArtisanBio] = useState("");
-  const [artisanSpecialization, setArtisanSpecialization] =
-    useState("");
-  const [artisanExperience, setArtisanExperience] =
-    useState("");
-
-  const [profileImage, setProfileImage] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
-
-  const [loading, setLoading] = useState(false);
-  const [localError, setLocalError] = useState("");
+  const {
+    registerUser,
+    registerArtisan,
+    error,
+    clearError,
+  } = useAuth();
 
   const navigate = useNavigate();
 
+  const [role, setRole] = useState("");
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] =
+    useState("");
+
+  const [password, setPassword] =
+    useState("");
+
+  const [artisanBio, setArtisanBio] =
+    useState("");
+
+  const [
+    artisanSpecialization,
+    setArtisanSpecialization,
+  ] = useState("");
+
+  const [
+    artisanExperience,
+    setArtisanExperience,
+  ] = useState("");
+
+  const [profileImage, setProfileImage] =
+    useState(null);
+
+  const [imagePreview, setImagePreview] =
+    useState(null);
+
+  const [loading, setLoading] =
+    useState(false);
+
+  const [localError, setLocalError] =
+    useState("");
+
   useEffect(() => {
+    clearError();
+
     return () => {
       if (imagePreview) {
         URL.revokeObjectURL(imagePreview);
       }
     };
-  }, [imagePreview]);
+  }, []);
 
   const handleImageChange = (e) => {
     const file = e.target.files?.[0];
@@ -52,18 +76,30 @@ const Register = () => {
     if (!file) return;
 
     setProfileImage(file);
-    setImagePreview(URL.createObjectURL(file));
+    setImagePreview(
+      URL.createObjectURL(file)
+    );
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!role) {
+      return setLocalError(
+        "Please select an account type."
+      );
+    }
+
     if (!firstName.trim()) {
-      return setLocalError("First name is required.");
+      return setLocalError(
+        "First name is required."
+      );
     }
 
     if (!email.trim()) {
-      return setLocalError("Email is required.");
+      return setLocalError(
+        "Email is required."
+      );
     }
 
     if (password.length < 8) {
@@ -100,14 +136,30 @@ const Register = () => {
 
       const formData = new FormData();
 
-      formData.append("firstName", firstName.trim());
-      formData.append("lastName", lastName.trim());
+      formData.append(
+        "firstName",
+        firstName.trim()
+      );
+
+      formData.append(
+        "lastName",
+        lastName.trim()
+      );
+
       formData.append(
         "email",
         email.toLowerCase().trim()
       );
-      formData.append("password", password);
-      formData.append("phoneNumber", phoneNumber);
+
+      formData.append(
+        "password",
+        password
+      );
+
+      formData.append(
+        "phoneNumber",
+        phoneNumber
+      );
 
       if (profileImage) {
         formData.append(
@@ -144,8 +196,7 @@ const Register = () => {
       );
     } catch (err) {
       setLocalError(
-        err?.response?.data?.message ||
-          err?.message ||
+        err.message ||
           "Registration failed."
       );
     } finally {
@@ -160,16 +211,17 @@ const Register = () => {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "85vh",
-        padding: "3rem 0",
+        padding: "2rem 0",
       }}
     >
       <div
         className="glass-card"
         style={{
-          maxWidth: "600px",
+          maxWidth: "700px",
           width: "100%",
           padding: "2.5rem",
-          borderRadius: "var(--radius-2xl)",
+          borderRadius:
+            "var(--radius-2xl)",
         }}
       >
         <div
@@ -180,7 +232,7 @@ const Register = () => {
         >
           <h2
             style={{
-              fontSize: "1.75rem",
+              fontSize: "1.8rem",
               fontWeight: 800,
             }}
           >
@@ -189,10 +241,12 @@ const Register = () => {
 
           <p
             style={{
-              color: "var(--muted-foreground)",
+              color:
+                "var(--muted-foreground)",
             }}
           >
-            Join ArtisanMarket today
+            Join Artisan Marketplace
+            today
           </p>
         </div>
 
@@ -202,14 +256,128 @@ const Register = () => {
             style={{
               display: "flex",
               gap: "0.5rem",
-              width: "100%",
               marginBottom: "1rem",
+              width: "100%",
             }}
           >
             <AlertCircle size={16} />
-            <span>{localError || error}</span>
+            <span>
+              {localError || error}
+            </span>
           </div>
         )}
+
+        {/* Account Type */}
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "1fr 1fr",
+            gap: "1rem",
+            marginBottom: "2rem",
+          }}
+        >
+          <div
+            onClick={() =>
+              setRole("USER")
+            }
+            style={{
+              cursor: "pointer",
+              padding: "1rem",
+              border:
+                role === "USER"
+                  ? "2px solid var(--primary)"
+                  : "1px solid var(--border)",
+              borderRadius: "16px",
+              textAlign: "center",
+            }}
+          >
+            <User size={35} />
+
+            <h5>Customer</h5>
+
+            <p>
+              Buy Handmade Products
+            </p>
+          </div>
+
+          <div
+            onClick={() =>
+              setRole("ARTISAN")
+            }
+            style={{
+              cursor: "pointer",
+              padding: "1rem",
+              border:
+                role === "ARTISAN"
+                  ? "2px solid var(--primary)"
+                  : "1px solid var(--border)",
+              borderRadius: "16px",
+              textAlign: "center",
+            }}
+          >
+            <Briefcase size={35} />
+
+            <h5>Artisan</h5>
+
+            <p>
+              Sell Handmade Products
+            </p>
+          </div>
+        </div>
+
+        {/* Profile Image */}
+
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "1.5rem",
+          }}
+        >
+          <div
+            style={{
+              width: "100px",
+              height: "100px",
+              margin: "auto",
+              position: "relative",
+            }}
+          >
+            <img
+              src={
+                imagePreview ||
+                "/default-avatar.png"
+              }
+              alt="Profile"
+              style={{
+                width: "100%",
+                height: "100%",
+                borderRadius: "50%",
+                objectFit: "cover",
+              }}
+            />
+
+            <label
+              style={{
+                position: "absolute",
+                bottom: 0,
+                right: 0,
+                cursor: "pointer",
+              }}
+            >
+              <Camera size={20} />
+
+              <input
+                hidden
+                type="file"
+                accept="image/*"
+                onChange={
+                  handleImageChange
+                }
+              />
+            </label>
+          </div>
+        </div>
 
         <form
           onSubmit={handleSubmit}
@@ -219,62 +387,15 @@ const Register = () => {
             gap: "1rem",
           }}
         >
-          {/* Profile Image */}
-
-          <div
-            style={{
-              textAlign: "center",
-            }}
-          >
-            <div
-              style={{
-                width: "90px",
-                height: "90px",
-                margin: "0 auto",
-                position: "relative",
-              }}
-            >
-              <img
-                src={
-                  imagePreview ||
-                  "/default-avatar.png"
-                }
-                alt="Preview"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-              />
-
-              <label
-                style={{
-                  position: "absolute",
-                  right: 0,
-                  bottom: 0,
-                  cursor: "pointer",
-                }}
-              >
-                <Camera size={18} />
-                <input
-                  type="file"
-                  accept="image/*"
-                  hidden
-                  onChange={handleImageChange}
-                />
-              </label>
-            </div>
-          </div>
-
           <input
             type="text"
             placeholder="First Name"
             value={firstName}
             onChange={(e) =>
-              setFirstName(e.target.value)
+              setFirstName(
+                e.target.value
+              )
             }
-            required
           />
 
           <input
@@ -282,18 +403,21 @@ const Register = () => {
             placeholder="Last Name"
             value={lastName}
             onChange={(e) =>
-              setLastName(e.target.value)
+              setLastName(
+                e.target.value
+              )
             }
           />
 
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Email Address"
             value={email}
             onChange={(e) =>
-              setEmail(e.target.value)
+              setEmail(
+                e.target.value
+              )
             }
-            required
           />
 
           <input
@@ -301,7 +425,9 @@ const Register = () => {
             placeholder="Phone Number"
             value={phoneNumber}
             onChange={(e) =>
-              setPhoneNumber(e.target.value)
+              setPhoneNumber(
+                e.target.value
+              )
             }
           />
 
@@ -310,9 +436,10 @@ const Register = () => {
             placeholder="Password"
             value={password}
             onChange={(e) =>
-              setPassword(e.target.value)
+              setPassword(
+                e.target.value
+              )
             }
-            required
           />
 
           {role === "ARTISAN" && (
@@ -320,7 +447,9 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="Specialization"
-                value={artisanSpecialization}
+                value={
+                  artisanSpecialization
+                }
                 onChange={(e) =>
                   setArtisanSpecialization(
                     e.target.value
@@ -330,8 +459,10 @@ const Register = () => {
 
               <input
                 type="number"
-                placeholder="Experience"
-                value={artisanExperience}
+                placeholder="Experience (Years)"
+                value={
+                  artisanExperience
+                }
                 onChange={(e) =>
                   setArtisanExperience(
                     e.target.value
@@ -340,7 +471,8 @@ const Register = () => {
               />
 
               <textarea
-                placeholder="Bio"
+                rows="4"
+                placeholder="Tell customers about yourself..."
                 value={artisanBio}
                 onChange={(e) =>
                   setArtisanBio(
@@ -360,18 +492,22 @@ const Register = () => {
 
             {loading
               ? "Creating Account..."
-              : "Create Account"}
+              : role === "ARTISAN"
+              ? "Register as Artisan"
+              : "Register as Customer"}
           </button>
         </form>
 
         <div
           style={{
             textAlign: "center",
-            marginTop: "1rem",
+            marginTop: "1.5rem",
           }}
         >
           Already have an account?{" "}
-          <Link to="/login">Login</Link>
+          <Link to="/login">
+            Login
+          </Link>
         </div>
       </div>
     </div>
