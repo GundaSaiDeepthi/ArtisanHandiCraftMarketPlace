@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import api from "../services/api";
-import { ProductCard } from "../components/ProductCard";
+import ProductCard from "../components/ProductCard";
 import { Search, SlidersHorizontal, ChevronLeft, ChevronRight, X } from "lucide-react";
 
 export const Shop = () => {
