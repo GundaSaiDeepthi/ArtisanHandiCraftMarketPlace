@@ -60,15 +60,15 @@ const Register = () => {
   const [localError, setLocalError] =
     useState("");
 
-  useEffect(() => {
-    clearError();
+ useEffect(() => {
+  clearError();
 
-    return () => {
-      if (imagePreview) {
-        URL.revokeObjectURL(imagePreview);
-      }
-    };
-  }, []);
+  return () => {
+    if (imagePreview) {
+      URL.revokeObjectURL(imagePreview);
+    }
+  };
+}, [imagePreview]);
 
   const handleImageChange = (e) => {
     const file = e.target.files?.[0];
@@ -279,21 +279,40 @@ const Register = () => {
           }}
         >
           <div
-            onClick={() =>
-              setRole("USER")
-            }
+              onClick={() => {
+    setRole("USER");
+
+    setArtisanBio("");
+    setArtisanExperience("");
+    setArtisanSpecialization("");
+  }}
             style={{
-              cursor: "pointer",
-              padding: "1rem",
-              border:
-                role === "USER"
-                  ? "2px solid var(--primary)"
-                  : "1px solid var(--border)",
-              borderRadius: "16px",
-              textAlign: "center",
-            }}
+  cursor: "pointer",
+  padding: "1rem",
+
+  border:
+    role === "USER"
+      ? "2px solid var(--primary)"
+      : "1px solid var(--border)",
+
+  background:
+    role === "USER"
+      ? "rgba(59,130,246,0.08)"
+      : "transparent",
+        boxShadow:
+    role === "USER"
+      ? "0 4px 15px rgba(0,0,0,0.08)"
+      : "none",
+
+  borderRadius: "16px",
+
+  textAlign: "center",
+
+  transition:
+    "all 0.3s ease",
+}}
           >
-            <User size={35} />
+            <User size={40} />
 
             <h5>Customer</h5>
 
@@ -306,18 +325,35 @@ const Register = () => {
             onClick={() =>
               setRole("ARTISAN")
             }
-            style={{
-              cursor: "pointer",
-              padding: "1rem",
-              border:
-                role === "ARTISAN"
-                  ? "2px solid var(--primary)"
-                  : "1px solid var(--border)",
-              borderRadius: "16px",
-              textAlign: "center",
-            }}
+           style={{
+  cursor: "pointer",
+
+  padding: "1rem",
+
+  border:
+    role === "ARTISAN"
+      ? "2px solid var(--primary)"
+      : "1px solid var(--border)",
+
+  background:
+    role === "ARTISAN"
+      ? "rgba(59,130,246,0.08)"
+      : "transparent",
+
+       boxShadow:
+    role === "ARTISAN"
+      ? "0 4px 15px rgba(0,0,0,0.08)"
+      : "none",
+
+  borderRadius: "16px",
+
+  textAlign: "center",
+
+  transition:
+    "all 0.3s ease",
+}}
           >
-            <Briefcase size={35} />
+            <Briefcase size={40} />
 
             <h5>Artisan</h5>
 
@@ -326,58 +362,68 @@ const Register = () => {
             </p>
           </div>
         </div>
+{/* Profile Image */}
 
-        {/* Profile Image */}
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: "1.5rem",
+  }}
+>
+  <div
+    style={{
+      width: "140px",
+      height: "140px",
+      position: "relative",
+    }}
+  >
+    <img
+      src={
+        imagePreview ||
+        "/default-avatar.jpg"
+      }
+      alt="Profile"
+      style={{
+        width: "100%",
+        height: "100%",
+        borderRadius: "50%",
+        objectFit: "cover",
+        border:
+          "4px solid var(--primary)",
+      }}
+    />
 
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "1.5rem",
-          }}
-        >
-          <div
-            style={{
-              width: "100px",
-              height: "100px",
-              margin: "auto",
-              position: "relative",
-            }}
-          >
-            <img
-              src={
-                imagePreview ||
-                "/default-avatar.png"
-              }
-              alt="Profile"
-              style={{
-                width: "100%",
-                height: "100%",
-                borderRadius: "50%",
-                objectFit: "cover",
-              }}
-            />
+    <label
+      style={{
+        position: "absolute",
+        right: 5,
+        bottom: 5,
+        background:
+          "var(--primary)",
+        width: "35px",
+        height: "35px",
+        borderRadius: "50%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        cursor: "pointer",
+      }}
+    >
+      <Camera
+        size={16}
+        color="#fff"
+      />
 
-            <label
-              style={{
-                position: "absolute",
-                bottom: 0,
-                right: 0,
-                cursor: "pointer",
-              }}
-            >
-              <Camera size={20} />
-
-              <input
-                hidden
-                type="file"
-                accept="image/*"
-                onChange={
-                  handleImageChange
-                }
-              />
-            </label>
-          </div>
-        </div>
+      <input
+        type="file"
+        hidden
+        accept="image/*"
+        onChange={handleImageChange}
+      />
+    </label>
+  </div>
+</div>
 
         <form
           onSubmit={handleSubmit}
@@ -387,115 +433,339 @@ const Register = () => {
             gap: "1rem",
           }}
         >
-          <input
-            type="text"
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) =>
-              setFirstName(
-                e.target.value
-              )
-            }
-          />
+         <div className="form-group">
+  <label className="form-label">
+    First Name
+  </label>
 
-          <input
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) =>
-              setLastName(
-                e.target.value
-              )
-            }
-          />
+  <div
+    style={{
+      position: "relative",
+    }}
+  >
+    {/* FirstName*/}
+    <input
+      type="text"
+      value={firstName}
+      required
+      onChange={(e) =>
+        setFirstName(e.target.value)
+      }
+      className="form-input"
+      placeholder="John"
+      style={{
+        paddingLeft: "2.5rem",
+      }}
+    />
 
-          <input
-            type="email"
-            placeholder="Email Address"
-            value={email}
-            onChange={(e) =>
-              setEmail(
-                e.target.value
-              )
-            }
-          />
+    <User
+      size={16}
+      style={{
+        position: "absolute",
+        left: "0.85rem",
+        top: "50%",
+        transform:
+          "translateY(-50%)",
+        color:
+          "var(--muted-foreground)",
+      }}
+    />
+  </div>
+</div>
+{/* Last Name */}
+         <div className="form-group">
+  <label className="form-label">
+    Last Name
+  </label>
 
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            value={phoneNumber}
-            onChange={(e) =>
-              setPhoneNumber(
-                e.target.value
-              )
-            }
-          />
+  <div style={{ position: "relative" }}>
+    <input
+      type="text"
+      value={lastName}
+      onChange={(e) =>
+        setLastName(e.target.value)
+      }
+      className="form-input"
+      placeholder="Doe"
+      style={{
+        paddingLeft: "2.5rem",
+      }}
+    />
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) =>
-              setPassword(
-                e.target.value
-              )
-            }
-          />
+    <User
+      size={16}
+      style={{
+        position: "absolute",
+        left: "0.85rem",
+        top: "50%",
+        transform:
+          "translateY(-50%)",
+        color:
+          "var(--muted-foreground)",
+      }}
+    />
+  </div>
+</div>
+{/* Email*/}
+         <div className="form-group">
+  <label className="form-label">
+    Email Address
+  </label>
 
-          {role === "ARTISAN" && (
-            <>
-              <input
-                type="text"
-                placeholder="Specialization"
-                value={
-                  artisanSpecialization
-                }
-                onChange={(e) =>
-                  setArtisanSpecialization(
-                    e.target.value
-                  )
-                }
-              />
+  <div style={{ position: "relative" }}>
+    <input
+      type="email"
+      value={email}
+      required
+      onChange={(e) =>
+        setEmail(e.target.value)
+      }
+      className="form-input"
+      placeholder="you@example.com"
+      style={{
+        paddingLeft: "2.5rem",
+      }}
+    />
 
-              <input
-                type="number"
-                placeholder="Experience (Years)"
-                value={
-                  artisanExperience
-                }
-                onChange={(e) =>
-                  setArtisanExperience(
-                    e.target.value
-                  )
-                }
-              />
+    <Mail
+      size={16}
+      style={{
+        position: "absolute",
+        left: "0.85rem",
+        top: "50%",
+        transform:
+          "translateY(-50%)",
+        color:
+          "var(--muted-foreground)",
+      }}
+    />
+  </div>
+</div>
+{/* Phone Number */}
 
-              <textarea
-                rows="4"
-                placeholder="Tell customers about yourself..."
-                value={artisanBio}
-                onChange={(e) =>
-                  setArtisanBio(
-                    e.target.value
-                  )
-                }
-              />
-            </>
-          )}
+        <div className="form-group">
+  <label className="form-label">
+    Phone Number
+  </label>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="btn btn-primary"
-          >
-            <UserPlus size={18} />
+  <div style={{ position: "relative" }}>
+    <input
+      type="tel"
+      value={phoneNumber}
+      required
+      onChange={(e) =>
+        setPhoneNumber(e.target.value)
+      }
+      className="form-input"
+      placeholder="9876543210"
+      style={{
+        paddingLeft: "2.5rem",
+      }}
+    />
 
-            {loading
-              ? "Creating Account..."
-              : role === "ARTISAN"
-              ? "Register as Artisan"
-              : "Register as Customer"}
-          </button>
+    <Phone
+      size={16}
+      style={{
+        position: "absolute",
+        left: "0.85rem",
+        top: "50%",
+        transform:
+          "translateY(-50%)",
+        color:
+          "var(--muted-foreground)",
+      }}
+    />
+  </div>
+</div>
+{/* Password */}
+
+         <div className="form-group">
+  <label className="form-label">
+    Password
+  </label>
+
+  <div style={{ position: "relative" }}>
+    <input
+      type="password"
+      value={password}
+      required
+      onChange={(e) =>
+        setPassword(e.target.value)
+      }
+      className="form-input"
+      placeholder="Minimum 8 characters(1 uppercase, 1 lowercase, 1 number, 1 special character)"
+      style={{
+        paddingLeft: "2.5rem",
+      }}
+    />
+
+    <Key
+      size={16}
+      style={{
+        position: "absolute",
+        left: "0.85rem",
+        top: "50%",
+        transform:
+          "translateY(-50%)",
+        color:
+          "var(--muted-foreground)",
+      }}
+    />
+  </div>
+</div>
+
+
+        {role === "ARTISAN" && (
+  <>
+    {/* Specialization */}
+
+    <div className="form-group">
+      <label className="form-label">
+        Specialization
+      </label>
+
+      <div
+        style={{
+          position: "relative",
+        }}
+      >
+        <input
+          type="text"
+          value={artisanSpecialization}
+          required
+          onChange={(e) =>
+            setArtisanSpecialization(
+              e.target.value
+            )
+          }
+          className="form-input"
+          placeholder="Wood Carving"
+          style={{
+            paddingLeft: "2.5rem",
+          }}
+        />
+
+        <Briefcase
+          size={16}
+          style={{
+            position: "absolute",
+            left: "0.85rem",
+            top: "50%",
+            transform:
+              "translateY(-50%)",
+            color:
+              "var(--muted-foreground)",
+          }}
+        />
+      </div>
+    </div>
+
+    {/* Experience */}
+
+    <div className="form-group">
+      <label className="form-label">
+        Experience (Years)
+      </label>
+
+      <div
+        style={{
+          position: "relative",
+        }}
+      >
+        <input
+          type="number"
+          value={artisanExperience}
+          required
+          onChange={(e) =>
+            setArtisanExperience(
+              e.target.value
+            )
+          }
+          className="form-input"
+          placeholder="5"
+          style={{
+            paddingLeft: "2.5rem",
+          }}
+        />
+
+        <FileText
+          size={16}
+          style={{
+            position: "absolute",
+            left: "0.85rem",
+            top: "50%",
+            transform:
+              "translateY(-50%)",
+            color:
+              "var(--muted-foreground)",
+          }}
+        />
+      </div>
+    </div>
+
+    {/* Bio */}
+
+    <div className="form-group">
+      <label className="form-label">
+        Artisan Bio
+      </label>
+
+      <div
+        style={{
+          position: "relative",
+        }}
+      >
+        <textarea
+          rows="4"
+          value={artisanBio}
+          required
+          onChange={(e) =>
+            setArtisanBio(
+              e.target.value
+            )
+          }
+          className="form-input"
+          placeholder="Tell customers about your skills, products and experience..."
+          style={{
+            paddingLeft: "2.5rem",
+            resize: "vertical",
+          }}
+        />
+
+        <FileText
+          size={16}
+          style={{
+            position: "absolute",
+            left: "0.85rem",
+            top: "18px",
+            color:
+              "var(--muted-foreground)",
+          }}
+        />
+      </div>
+    </div>
+  </>
+)}
+
+         <button
+  type="submit"
+  disabled={loading}
+  className="btn btn-primary"
+  style={{
+    width: "100%",
+    padding: "0.75rem",
+    gap: "0.5rem",
+    marginTop: "0.5rem",
+  }}
+>
+  <UserPlus size={18} />
+
+  {loading
+    ? "Creating Account..."
+    : role === "ARTISAN"
+    ? "Register as Artisan"
+    : "Register as Customer"}
+</button>
         </form>
 
         <div
