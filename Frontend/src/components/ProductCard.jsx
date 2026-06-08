@@ -4,7 +4,7 @@ import { ShoppingCart, Heart, Eye } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { useAuth } from "../context/AuthContext";
-import { StarRating } from "./StarRating";
+import StarRating from "./StarRating";
 
 const ProductCard = ({ product }) => {
   const { user } = useAuth();
