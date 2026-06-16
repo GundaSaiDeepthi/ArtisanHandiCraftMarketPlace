@@ -448,10 +448,8 @@ app.use(
         success: false,
 
         message:
-          "Validation Error",
-
-        error:
           err.message,
+
       });
     }
 
