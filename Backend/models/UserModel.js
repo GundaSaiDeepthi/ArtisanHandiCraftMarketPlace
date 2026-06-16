@@ -399,7 +399,7 @@ userSchema.pre("save", function (next) {
     this.lastName = this.lastName.trim();
   }
 
-  next();
+  
 });
 
 /*
