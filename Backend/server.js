@@ -1,6 +1,6 @@
+import "dotenv/config";
 import exp from "express";
 import cookieParser from "cookie-parser";
-import { config } from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import helmet from "helmet";
@@ -35,14 +35,6 @@ import { artisanRoute } from "./APIs/ArtisanAPI.js";
 import { adminRoute } from "./APIs/AdminAPI.js";
 
 import { paymentRoute } from "./APIs/PaymentAPI.js";
-
-/*
-==================================================
-LOAD ENV VARIABLES
-==================================================
-*/
-
-config();
 
 /*
 ==================================================

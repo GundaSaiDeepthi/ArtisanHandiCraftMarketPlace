@@ -146,24 +146,6 @@ userRoute.post(
 
           
 
-      /*
-      ==================================
-      SEND EMAIL
-      ==================================
-      */
-
-      await sendEmail({
-
-  to:
-    newUserObj.user.email,
-
-  subject:
-    "Email Verification OTP",
-
-  text:
-    `Your OTP for email verification is ${newUserObj.otp}. OTP valid for 10 minutes.`,
-});
-
       res.status(201).json({
 
         success: true,
