@@ -8,7 +8,9 @@ import { config }
 from "dotenv";
 
 import {
-  authenticate
+  authenticate,
+  forgotPassword,
+  resetPassword
 } from "../services/authService.js";
 
 import {
@@ -82,7 +84,8 @@ commonRouter.post(
 
           secure: process.env.NODE_ENV === "production",
 
-          sameSite: "lax",
+          sameSite:
+            process.env.NODE_ENV === "production" ? "none" : "lax",
 
           path: "/",
 
@@ -146,7 +149,8 @@ commonRouter.get(
 
         secure: process.env.NODE_ENV === "production",
 
-        sameSite: "lax",
+        sameSite:
+          process.env.NODE_ENV === "production" ? "none" : "lax",
 
         path: "/",
       }
@@ -469,64 +473,10 @@ commonRouter.post(
       const { email } =
         req.body;
 
-      /*
-      ====================================
-      FIND USER
-      ====================================
-      */
+      const result =
+        await forgotPassword(email);
 
-      const user =
-        await UserTypeModel.findOne({
-          email,
-        });
-
-      if (!user) {
-
-        return res.status(404).json({
-
-          success: false,
-
-          message:
-            "Email not found",
-        });
-      }
-
-      /*
-      ====================================
-      GENERATE RESET TOKEN
-      ====================================
-      */
-
-      const resetToken =
-        jwt.sign(
-
-          {
-            userId:
-              user._id,
-          },
-
-          process.env.JWT_SECRET,
-
-          {
-            expiresIn: "15m",
-          }
-        );
-
-      /*
-      ====================================
-      SEND RESPONSE
-      ====================================
-      */
-
-      res.status(200).json({
-
-        success: true,
-
-        message:
-          "Reset token generated",
-
-        resetToken,
-      });
+      res.status(200).json(result);
 
     } catch (err) {
 
@@ -560,65 +510,12 @@ commonRouter.put(
 
       } = req.body;
 
-      /*
-      ====================================
-      VERIFY TOKEN
-      ====================================
-      */
-
-      const decoded =
-        jwt.verify(
-
-          token,
-
-          process.env.JWT_SECRET
-        );
-
-      /*
-      ====================================
-      FIND USER
-      ====================================
-      */
-
-      const user =
-        await UserTypeModel.findById(
-
-          decoded.userId
-        );
-
-      if (!user) {
-
-        return res.status(404).json({
-
-          success: false,
-
-          message:
-            "User not found",
-        });
-      }
-
-      /*
-      ====================================
-      HASH PASSWORD
-      ====================================
-      */
-
-      user.password =
-        await bcrypt.hash(
-
-          newPassword,
-
-          10
-        );
-
-      await user.save();
+      const result =
+        await resetPassword(token, newPassword);
 
       res.status(200).json({
-
         success: true,
-
-        message:
-          "Password reset successful",
+        message: "Password reset successful"
       });
 
     } catch (err) {

@@ -59,7 +59,7 @@ const AppContent = () => {
           <Route path="/shop" element={<Shop />} />
 
           <Route
-            path="/product/:id"
+            path="/products/:productId"
             element={<ProductDetails />}
           />
 

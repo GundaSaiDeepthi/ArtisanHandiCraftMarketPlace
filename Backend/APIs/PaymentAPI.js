@@ -27,7 +27,7 @@ const razorpay =
       process.env.RAZORPAY_KEY_ID,
 
     key_secret:
-      process.env.RAZORPAY_KEY_SECRET,
+      process.env.RAZORPAY_SECRET,
   });
 
 /*
@@ -177,7 +177,7 @@ paymentRoute.post(
           .createHmac(
             "sha256",
             process.env
-              .RAZORPAY_KEY_SECRET
+              .RAZORPAY_SECRET
           )
 
           .update(

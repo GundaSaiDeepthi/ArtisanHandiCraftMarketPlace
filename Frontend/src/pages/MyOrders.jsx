@@ -25,7 +25,7 @@ const MyOrders = () => {
         }
       );
 
-      setOrders(response.data.orders || []);
+      setOrders(response.data.payload || []);
     } catch (error) {
       console.error(error);
     } finally {

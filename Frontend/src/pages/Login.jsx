@@ -52,7 +52,7 @@ const Login = () => {
       });
 
       if (userData?.role === "ADMIN") {
-        navigate("/admin");
+        navigate("/admin/orders");
       } else if (
         userData?.role === "ARTISAN"
       ) {
