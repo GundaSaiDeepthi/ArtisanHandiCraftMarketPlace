@@ -51,11 +51,7 @@ const AppContent = () => {
       <Navbar />
 
       <main
-        style={{
-          padding: "1rem",
-          minHeight: "80vh",
-        }}
-      >
+         className="p-4 min-h-[80vh]">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />

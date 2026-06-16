@@ -2,16 +2,22 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import api from "../services/api";
 import ProductCard from "../components/ProductCard";
-import { Search, SlidersHorizontal, ChevronLeft, ChevronRight, X } from "lucide-react";
+import {
+  Search,
+  SlidersHorizontal,
+  ChevronLeft,
+  ChevronRight,
+  X,
+} from "lucide-react";
 
-export const Shop = () => {
+const Shop = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [totalProducts, setTotalProducts] = useState(0);
 
-  // Filters state
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
   const [minPrice, setMinPrice] = useState("");
@@ -21,40 +27,42 @@ export const Shop = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Load URL queries on startup
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const urlSearch = params.get("search") || "";
-    const urlCategory = params.get("category") || "";
-    
-    setSearch(urlSearch);
-    setCategory(urlCategory);
+
+    setSearch(params.get("search") || "");
+    setCategory(params.get("category") || "");
     setPage(1);
   }, [location.search]);
 
   const fetchProducts = async () => {
     try {
       setLoading(true);
+
       const queryParams = new URLSearchParams();
+
       if (search) queryParams.append("search", search);
       if (category) queryParams.append("category", category);
       if (minPrice) queryParams.append("minPrice", minPrice);
       if (maxPrice) queryParams.append("maxPrice", maxPrice);
       if (sort) queryParams.append("sort", sort);
+
       queryParams.append("page", page.toString());
       queryParams.append("limit", "8");
 
-      const res = await api.get(`/artisan-api/products?${queryParams.toString()}`);
+      const res = await api.get(
+        `/artisan-api/products?${queryParams.toString()}`
+      );
+
       if (res.data.success) {
         setProducts(res.data.payload || []);
         setTotalPages(res.data.totalPages || 1);
         setTotalProducts(res.data.totalProducts || 0);
       }
-    }  catch (err) {
-  console.error("Error loading products:", err);
-  setProducts([]);
-}
-     finally {
+    } catch (err) {
+      console.error("Error loading products:", err);
+      setProducts([]);
+    } finally {
       setLoading(false);
     }
   };
@@ -83,179 +91,229 @@ export const Shop = () => {
   ];
 
   return (
-    <div className="container anim-fade shop-layout" style={{ paddingTop: "2rem", display: "grid", gridTemplateColumns: "280px 1fr", gap: "2rem" }}>
-      {/* Sidebar Filters */}
-      <aside className="glass shop-sidebar" style={{
-        padding: "1.5rem",
-        borderRadius: "var(--radius-xl)",
-        height: "fit-content",
-        display: "flex",
-        flexDirection: "column",
-        gap: "1.75rem"
-      }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <h3 style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1.2rem", margin: 0 }}>
-            <SlidersHorizontal size={18} /> Filters
-          </h3>
-          {(search || category || minPrice || maxPrice || sort !== "latest") && (
-            <button onClick={handleClearFilters} className="btn-ghost" style={{ fontSize: "0.8rem", border: "none", background: "none", cursor: "pointer", color: "var(--danger)", display: "flex", alignItems: "center", gap: "0.25rem", padding: "2px 6px", borderRadius: "var(--radius-sm)" }}>
-              <X size={12} /> Clear
-            </button>
-          )}
+    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      <div className="mx-auto max-w-7xl px-4 py-10">
+        <div className="grid gap-8 lg:grid-cols-[300px_1fr]">
+          {/* Sidebar */}
+          <aside className="sticky top-24 h-fit rounded-3xl border border-slate-200 bg-white p-6 shadow-lg dark:border-slate-800 dark:bg-slate-900">
+            <div className="mb-6 flex items-center justify-between">
+              <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-white">
+                <SlidersHorizontal size={18} />
+                Filters
+              </h3>
+
+              {(search ||
+                category ||
+                minPrice ||
+                maxPrice ||
+                sort !== "latest") && (
+                <button
+                  onClick={handleClearFilters}
+                  className="flex items-center gap-1 text-sm font-medium text-red-500 hover:text-red-600"
+                >
+                  <X size={14} />
+                  Clear
+                </button>
+              )}
+            </div>
+
+            {/* Search */}
+            <div className="mb-5">
+              <label className="mb-2 block text-sm font-medium">
+                Search
+              </label>
+
+              <div className="relative">
+                <input
+                  value={search}
+                  onChange={(e) => {
+                    setSearch(e.target.value);
+                    setPage(1);
+                  }}
+                  placeholder="Search crafts..."
+                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 pr-10 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+                />
+
+                <Search
+                  size={18}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400"
+                />
+              </div>
+            </div>
+
+            {/* Category */}
+            <div className="mb-5">
+              <label className="mb-2 block text-sm font-medium">
+                Category
+              </label>
+
+              <select
+                value={category}
+                onChange={(e) => {
+                  setCategory(e.target.value);
+                  setPage(1);
+                }}
+                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 focus:border-blue-500 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+              >
+                <option value="">All Categories</option>
+
+                {categories.map((cat) => (
+                  <option key={cat}>{cat}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Price */}
+            <div className="mb-5">
+              <label className="mb-2 block text-sm font-medium">
+                Price Range (₹)
+              </label>
+
+              <div className="flex items-center gap-2">
+                <input
+                  type="number"
+                  placeholder="Min"
+                  value={minPrice}
+                  onChange={(e) => {
+                    setMinPrice(e.target.value);
+                    setPage(1);
+                  }}
+                  className="w-full rounded-xl border border-slate-300 bg-white px-3 py-3 dark:border-slate-700 dark:bg-slate-800"
+                />
+
+                <span>-</span>
+
+                <input
+                  type="number"
+                  placeholder="Max"
+                  value={maxPrice}
+                  onChange={(e) => {
+                    setMaxPrice(e.target.value);
+                    setPage(1);
+                  }}
+                  className="w-full rounded-xl border border-slate-300 bg-white px-3 py-3 dark:border-slate-700 dark:bg-slate-800"
+                />
+              </div>
+            </div>
+
+            {/* Sort */}
+            <div>
+              <label className="mb-2 block text-sm font-medium">
+                Sort By
+              </label>
+
+              <select
+                value={sort}
+                onChange={(e) => {
+                  setSort(e.target.value);
+                  setPage(1);
+                }}
+                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 focus:border-blue-500 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+              >
+                <option value="latest">Latest Arrivals</option>
+                <option value="price_asc">
+                  Price: Low to High
+                </option>
+                <option value="price_desc">
+                  Price: High to Low
+                </option>
+              </select>
+            </div>
+          </aside>
+
+          {/* Main */}
+          <main className="flex flex-col gap-8">
+            {/* Header */}
+            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <h1 className="text-4xl font-bold text-slate-900 dark:text-white">
+                  Discover Handcrafted Treasures
+                </h1>
+
+                <p className="mt-2 text-slate-500 dark:text-slate-400">
+                  Explore unique artisan-made creations
+                  from across India.
+                </p>
+              </div>
+
+              <div className="rounded-2xl bg-slate-100 px-4 py-2 text-sm font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                {totalProducts} Products Found
+              </div>
+            </div>
+
+            {/* Loading */}
+            {loading ? (
+              <div className="flex min-h-[400px] items-center justify-center">
+                <div className="animate-pulse text-lg font-semibold text-slate-600 dark:text-slate-300">
+                  Loading handcrafted products...
+                </div>
+              </div>
+            ) : products.length === 0 ? (
+              <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-16 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900">
+                <h3 className="text-2xl font-bold">
+                  No Products Found
+                </h3>
+
+                <p className="mt-3 text-slate-500">
+                  Try adjusting your filters or search
+                  terms.
+                </p>
+
+                <button
+                  onClick={handleClearFilters}
+                  className="mt-6 rounded-xl bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
+                {products.map((product) => (
+                  <ProductCard
+                    key={product._id}
+                    product={product}
+                  />
+                ))}
+              </div>
+            )}
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-4 flex items-center justify-center gap-4">
+                <button
+                  onClick={() =>
+                    setPage((p) => Math.max(1, p - 1))
+                  }
+                  disabled={page === 1}
+                  className="flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 font-medium shadow-sm transition hover:bg-slate-50 disabled:opacity-40 dark:border-slate-700 dark:bg-slate-900"
+                >
+                  <ChevronLeft size={16} />
+                  Previous
+                </button>
+
+                <span className="rounded-xl bg-slate-100 px-5 py-3 font-semibold dark:bg-slate-800">
+                  {page} / {totalPages}
+                </span>
+
+                <button
+                  onClick={() =>
+                    setPage((p) =>
+                      Math.min(totalPages, p + 1)
+                    )
+                  }
+                  disabled={page === totalPages}
+                  className="flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 font-medium shadow-sm transition hover:bg-slate-50 disabled:opacity-40 dark:border-slate-700 dark:bg-slate-900"
+                >
+                  Next
+                  <ChevronRight size={16} />
+                </button>
+              </div>
+            )}
+          </main>
         </div>
-
-        {/* Search */}
-        <div className="form-group">
-          <label className="form-label">Search</label>
-          <div style={{ position: "relative" }}>
-            <input
-              type="text"
-              placeholder="Search crafts..."
-              value={search}
-              onChange={(e) => { setSearch(e.target.value); setPage(1); }}
-              className="form-input"
-              style={{ paddingRight: "2rem" }}
-            />
-            <Search size={16} style={{ position: "absolute", right: "0.75rem", top: "50%", transform: "translateY(-50%)", color: "var(--muted-foreground)" }} />
-          </div>
-        </div>
-
-        {/* Category */}
-        <div className="form-group">
-          <label className="form-label">Category</label>
-          <select
-            value={category}
-            onChange={(e) => { setCategory(e.target.value); setPage(1); }}
-            className="form-input"
-          >
-            <option value="">All Categories</option>
-            {categories.map((cat, idx) => (
-              <option key={idx} value={cat}>{cat}</option>
-            ))}
-          </select>
-        </div>
-
-        {/* Price Range */}
-        <div className="form-group">
-          <label className="form-label">Price Range (₹)</label>
-          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-            <input
-              type="number"
-              placeholder="Min"
-              value={minPrice}
-              onChange={(e) => { setMinPrice(e.target.value); setPage(1); }}
-              className="form-input"
-              style={{ padding: "0.5rem" }}
-            />
-            <span style={{ color: "var(--muted-foreground)" }}>-</span>
-            <input
-              type="number"
-              placeholder="Max"
-              value={maxPrice}
-              onChange={(e) => { setMaxPrice(e.target.value); setPage(1); }}
-              className="form-input"
-              style={{ padding: "0.5rem" }}
-            />
-          </div>
-        </div>
-
-        {/* Sort */}
-        <div className="form-group">
-          <label className="form-label">Sort By</label>
-          <select
-            value={sort}
-            onChange={(e) => { setSort(e.target.value); setPage(1); }}
-            className="form-input"
-          >
-            <option value="latest">Latest Arrivals</option>
-            <option value="price_asc">Price: Low to High</option>
-            <option value="price_desc">Price: High to Low</option>
-          </select>
-        </div>
-      </aside>
-
-      {/* Product Grid Area */}
-      <main style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div>
-            <h2 style={{ fontSize: "1.5rem", margin: 0 }}>All Creations</h2>
-            <p style={{ color: "var(--muted-foreground)", fontSize: "0.85rem" }}>
-              Showing {products.length} of {totalProducts} items
-            </p>
-          </div>
-        </div>
-
-        {/* Products Grid */}
-        {loading ? (
-          <div style={{ display: "flex", justifyContent: "center", padding: "8rem 0" }}>
-            <span className="anim-pulse" style={{ fontSize: "1.2rem", fontWeight: 600 }}>Filtering unique creations...</span>
-          </div>
-        ) : products.length === 0 ? (
-          <div className="glass" style={{ textAlign: "center", padding: "5rem", borderRadius: "var(--radius-xl)" }}>
-            <p style={{ fontSize: "1.2rem", color: "var(--muted-foreground)", marginBottom: "1rem" }}>
-              No handicrafts match your filters.
-            </p>
-            <button onClick={handleClearFilters} className="btn btn-primary">
-              Clear All Filters
-            </button>
-          </div>
-        ) : (
-          <div className="grid-3">
-            {products.map((product) => (
-              <ProductCard key={product._id} product={product} />
-            ))}
-          </div>
-        )}
-
-        {/* Pagination controls */}
-        {totalPages > 1 && (
-          <div style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "1rem",
-            marginTop: "2rem"
-          }}>
-            <button
-              onClick={() => setPage(p => Math.max(1, p - 1))}
-              disabled={page === 1}
-              className="btn btn-secondary"
-              style={{ padding: "0.5rem 0.75rem" }}
-            >
-              <ChevronLeft size={16} /> Prev
-            </button>
-            <span style={{ fontWeight: 600 }}>
-              Page {page} of {totalPages}
-            </span>
-            <button
-              onClick={() => setPage(p => Math.min(totalPages, p + 1))}
-              disabled={page === totalPages}
-              className="btn btn-secondary"
-              style={{ padding: "0.5rem 0.75rem" }}
-            >
-              Next <ChevronRight size={16} />
-            </button>
-          </div>
-        )}
-      </main>
-
-      <style>{`
-        .shop-layout {
-          display: grid;
-          grid-template-columns: 280px 1fr;
-          gap: 2rem;
-          margin-top: 2rem;
-        }
-        @media (max-width: 768px) {
-          .shop-layout {
-            grid-template-columns: 1fr !important;
-          }
-          .shop-sidebar {
-            margin-bottom: 1.5rem;
-          }
-        }
-      `}</style>
+      </div>
     </div>
   );
 };
+
 export default Shop;

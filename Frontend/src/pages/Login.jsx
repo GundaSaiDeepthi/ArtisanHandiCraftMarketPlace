@@ -1,7 +1,19 @@
+
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { LogIn, Key, Mail, AlertCircle } from "lucide-react";
+import {
+  LogIn,
+  Key,
+  Mail,
+  AlertCircle,
+} from "lucide-react";
+
+const inputClass =
+  "w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 pl-10 pr-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition";
+
+const iconClass =
+  "absolute left-3 top-1/2 -translate-y-1/2 text-slate-400";
 
 const Login = () => {
   const { login, error, clearError } = useAuth();
@@ -23,7 +35,9 @@ const Login = () => {
     if (loading) return;
 
     if (!email || !password) {
-      setLocalError("Please enter email and password.");
+      setLocalError(
+        "Please enter email and password."
+      );
       return;
     }
 
@@ -39,8 +53,10 @@ const Login = () => {
 
       if (userData?.role === "ADMIN") {
         navigate("/admin");
-      } else if (userData?.role === "ARTISAN") {
-        navigate("/artisan");
+      } else if (
+        userData?.role === "ARTISAN"
+      ) {
+        navigate("/artisan/dashboard");
       } else {
         navigate("/");
       }
@@ -67,93 +83,54 @@ const Login = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "75vh",
-        padding: "2rem 0",
-      }}
-    >
-      <div
-        className="glass-card anim-slide-up"
-        style={{
-          maxWidth: "450px",
-          width: "100%",
-          padding: "2.5rem",
-          borderRadius: "var(--radius-2xl)",
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "2rem",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "1.75rem",
-              fontFamily: "var(--font-display)",
-              fontWeight: 800,
-            }}
-          >
+    <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-white dark:bg-slate-950 transition-colors duration-300">
+
+      <div className="w-full max-w-md rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-8 shadow-2xl">
+
+        {/* Header */}
+        <div className="text-center mb-8">
+
+          <div className="inline-flex items-center gap-2 rounded-full bg-violet-100 dark:bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-600 dark:text-violet-300 mb-4">
+            <LogIn size={14} />
             Welcome Back
+          </div>
+
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-white">
+            Sign In
           </h2>
 
-          <p
-            style={{
-              color: "var(--muted-foreground)",
-              fontSize: "0.9rem",
-            }}
-          >
-            Log in to access your artisan marketplace
+          <p className="mt-2 text-slate-500 dark:text-slate-400">
+            Access your artisan marketplace account
           </p>
+
         </div>
 
+        {/* Error */}
         {(localError || error) && (
-          <div
-            className="badge badge-danger"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              width: "100%",
-              padding: "0.75rem 1rem",
-              borderRadius: "var(--radius-lg)",
-              fontSize: "0.85rem",
-              marginBottom: "1.5rem",
-              lineHeight: 1.4,
-            }}
-          >
-            <AlertCircle
-              size={16}
-              style={{ flexShrink: 0 }}
-            />
-            <span>
-              {localError || error}
-            </span>
+          <div className="mb-6 flex items-center gap-2 rounded-xl border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-500/10 px-4 py-3 text-red-600 dark:text-red-400">
+            <AlertCircle size={16} />
+            <span>{localError || error}</span>
           </div>
         )}
 
+        {/* Form */}
         <form
           onSubmit={handleSubmit}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.25rem",
-          }}
+          className="space-y-5"
         >
-          <div className="form-group">
-            <label className="form-label">
+
+          {/* Email */}
+          <div>
+            <label className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300">
               Email Address
             </label>
 
-            <div
-              style={{
-                position: "relative",
-              }}
-            >
+            <div className="relative">
+              <Mail
+                size={16}
+                className={iconClass}
+              />
+
               <input
                 type="email"
                 placeholder="you@example.com"
@@ -161,138 +138,81 @@ const Login = () => {
                 onChange={(e) =>
                   setEmail(e.target.value)
                 }
-                className="form-input"
-                style={{
-                  paddingLeft: "2.5rem",
-                }}
                 required
-              />
-
-              <Mail
-                size={16}
-                style={{
-                  position: "absolute",
-                  left: "0.85rem",
-                  top: "50%",
-                  transform:
-                    "translateY(-50%)",
-                  color:
-                    "var(--muted-foreground)",
-                }}
+                className={inputClass}
               />
             </div>
           </div>
 
-          <div className="form-group">
-            <div
-              style={{
-                display: "flex",
-                justifyContent:
-                  "space-between",
-                alignItems: "center",
-                marginBottom: "0.375rem",
-              }}
-            >
-              <label className="form-label">
+          {/* Password */}
+          <div>
+            <div className="mb-2 flex items-center justify-between">
+              <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
                 Password
               </label>
 
               <Link
                 to="/forgot-password"
-                style={{
-                  fontSize: "0.8rem",
-                  color: "var(--primary)",
-                  fontWeight: 500,
-                }}
+                className="text-sm font-medium text-violet-600 dark:text-violet-400 hover:underline"
               >
                 Forgot Password?
               </Link>
             </div>
 
-            <div
-              style={{
-                position: "relative",
-              }}
-            >
+            <div className="relative">
+              <Key
+                size={16}
+                className={iconClass}
+              />
+
               <input
                 type="password"
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) =>
-                  setPassword(
-                    e.target.value
-                  )
+                  setPassword(e.target.value)
                 }
-                className="form-input"
-                style={{
-                  paddingLeft: "2.5rem",
-                }}
                 required
-              />
-
-              <Key
-                size={16}
-                style={{
-                  position: "absolute",
-                  left: "0.85rem",
-                  top: "50%",
-                  transform:
-                    "translateY(-50%)",
-                  color:
-                    "var(--muted-foreground)",
-                }}
+                className={inputClass}
               />
             </div>
           </div>
 
+          {/* Submit */}
           <button
             type="submit"
             disabled={loading}
-            className="btn btn-primary"
-            style={{
-              width: "100%",
-              padding: "0.75rem",
-              gap: "0.5rem",
-              marginTop: "0.5rem",
-            }}
+            className="w-full flex items-center justify-center gap-2 rounded-xl bg-violet-600 px-5 py-3 font-semibold text-white transition hover:bg-violet-700 disabled:opacity-50"
           >
             <LogIn size={18} />
 
             {loading
-              ? "Logging In..."
-              : "Log In"}
+              ? "Signing In..."
+              : "Sign In"}
           </button>
+
         </form>
 
-        <div
-          style={{
-            textAlign: "center",
-            marginTop: "2rem",
-            fontSize: "0.9rem",
-          }}
-        >
-          <span
-            style={{
-              color:
-                "var(--muted-foreground)",
-            }}
-          >
+        {/* Footer */}
+        <div className="mt-8 text-center">
+
+          <span className="text-slate-500 dark:text-slate-400">
             Don't have an account?{" "}
           </span>
 
           <Link
             to="/register"
-            style={{
-              color: "var(--primary)",
-              fontWeight: 600,
-            }}
+            className="font-semibold text-violet-600 dark:text-violet-400 hover:underline"
           >
-            Sign Up
+            Create Account
           </Link>
+
         </div>
+
       </div>
     </div>
   );
 };
 
 export default Login;
+

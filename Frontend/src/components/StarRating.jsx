@@ -8,65 +8,50 @@ const StarRating = ({
   interactive = false,
   onRatingChange,
 }) => {
-  const stars = Array.from({ length: maxRating }, (_, i) => i + 1);
+  const stars = Array.from(
+    { length: maxRating },
+    (_, index) => index + 1
+  );
 
   return (
-    <>
-      <div
-        style={{
-          display: "flex",
-          gap: "0.25rem",
-          alignItems: "center",
-        }}
-      >
-        {stars.map((star) => {
-          const isFilled = interactive
-            ? star <= rating
-            : star <= Math.round(rating);
+    <div
+      className="flex items-center gap-1"
+      role={interactive ? "radiogroup" : "img"}
+      aria-label={`Rating: ${rating} out of ${maxRating}`}
+    >
+      {stars.map((star) => {
+        const isFilled = interactive
+          ? star <= rating
+          : star <= Math.round(rating);
 
-          return (
-            <button
-              key={star}
-              type="button"
-              disabled={!interactive}
-              onClick={() => {
-                if (interactive && onRatingChange) {
-                  onRatingChange(star);
-                }
-              }}
-              style={{
-                background: "none",
-                border: "none",
-                cursor: interactive ? "pointer" : "default",
-                padding: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                transition: "transform 0.1s ease",
-              }}
-              className={interactive ? "star-btn" : ""}
-            >
-              <Star
-                size={size}
-                style={{
-                  fill: isFilled ? "#facc15" : "none",
-                  color: isFilled ? "#facc15" : "#9ca3af",
-                  opacity: isFilled ? 1 : 0.5,
-                }}
-              />
-            </button>
-          );
-        })}
-      </div>
-
-      <style>
-        {`
-          .star-btn:hover {
-            transform: scale(1.2);
-          }
-        `}
-      </style>
-    </>
+        return (
+          <button
+            key={star}
+            type="button"
+            disabled={!interactive}
+            aria-label={`Rate ${star} star${star > 1 ? "s" : ""}`}
+            onClick={() =>
+              interactive &&
+              onRatingChange?.(star)
+            }
+            className={`flex items-center justify-center transition-all duration-200 ${
+              interactive
+                ? "cursor-pointer hover:scale-125 active:scale-110"
+                : "cursor-default"
+            }`}
+          >
+            <Star
+              size={size}
+              className={`transition-all duration-200 ${
+                isFilled
+                  ? "fill-amber-400 text-amber-400"
+                  : "fill-transparent text-slate-500"
+              }`}
+            />
+          </button>
+        );
+      })}
+    </div>
   );
 };
 

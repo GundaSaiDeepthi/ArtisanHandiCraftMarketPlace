@@ -9,22 +9,31 @@ import StarRating from "./StarRating";
 const ProductCard = ({ product }) => {
   const { user } = useAuth();
   const { addToCart } = useCart();
-  const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
+  const {
+    isInWishlist,
+    addToWishlist,
+    removeFromWishlist,
+  } = useWishlist();
+
   const [adding, setAdding] = useState(false);
-  const [wishlistLoading, setWishlistLoading] = useState(false);
+  const [wishlistLoading, setWishlistLoading] =
+    useState(false);
 
   const favorited = isInWishlist(product._id);
 
   const handleCartClick = async (e) => {
     e.preventDefault();
+
     if (!user) {
       alert("Please login to add products to your cart!");
       return;
     }
+
     if (user.role !== "USER") {
       alert("Only customers can purchase products!");
       return;
     }
+
     try {
       setAdding(true);
       await addToCart(product._id, 1);
@@ -37,16 +46,20 @@ const ProductCard = ({ product }) => {
 
   const handleWishlistClick = async (e) => {
     e.preventDefault();
+
     if (!user) {
       alert("Please login to save products to your wishlist!");
       return;
     }
+
     if (user.role !== "USER") {
       alert("Only customers can use the wishlist!");
       return;
     }
+
     try {
       setWishlistLoading(true);
+
       if (favorited) {
         await removeFromWishlist(product._id);
       } else {
@@ -60,185 +73,120 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="glass-card product-card" style={{
-      display: "flex",
-      flexDirection: "column",
-      height: "100%",
-      position: "relative",
-      overflow: "hidden"
-    }}>
-      {/* Product Image Wrapper */}
-      <div style={{
-        position: "relative",
-        paddingTop: "100%", /* 1:1 Aspect Ratio */
-        backgroundColor: "var(--muted)",
-        overflow: "hidden"
-      }}>
+    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      
+      {/* Product Image */}
+      <div className="relative aspect-square overflow-hidden bg-slate-800">
         <img
           src={product.image || "/default-product.png"}
           alt={product.title}
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            transition: "transform var(--transition-slow)"
-          }}
-          className="product-img"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
 
-        {/* Floating actions */}
-        <div style={{
-          position: "absolute",
-          top: "0.75rem",
-          right: "0.75rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.5rem",
-          zIndex: 10
-        }}>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/0 transition-all duration-300 group-hover:bg-black/10" />
+
+        {/* Floating Buttons */}
+        <div className="absolute right-3 top-3 flex flex-col gap-2">
           {(!user || user.role === "USER") && (
             <button
               onClick={handleWishlistClick}
               disabled={wishlistLoading}
-              className="glass action-btn"
-              style={{
-                width: "36px",
-                height: "36px",
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "none",
-                cursor: "pointer",
-                boxShadow: "var(--shadow-sm)",
-                color: favorited ? "var(--danger)" : "var(--foreground)",
-                transition: "transform var(--transition-fast)"
-              }}
+              className={`flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-black/30 backdrop-blur-md transition-all duration-300 hover:scale-110 ${
+                favorited
+                  ? "text-red-500"
+                  : "text-slate-200 hover:text-white"
+              }`}
             >
-              <Heart size={18} style={{ fill: favorited ? "var(--danger)" : "none" }} />
+              <Heart
+                size={18}
+                fill={favorited ? "currentColor" : "none"}
+              />
             </button>
           )}
 
           <Link
             to={`/products/${product._id}`}
-            className="glass action-btn"
-            style={{
-              width: "36px",
-              height: "36px",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              border: "none",
-              cursor: "pointer",
-              boxShadow: "var(--shadow-sm)",
-              color: "var(--foreground)",
-              transition: "transform var(--transition-fast)"
-            }}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-black/30 text-slate-200 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:text-white"
           >
             <Eye size={18} />
           </Link>
         </div>
 
-        {/* Stock Status Badge */}
+        {/* Stock Badge */}
         {product.stock <= 0 ? (
-          <span className="badge badge-danger" style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem" }}>
+          <span className="absolute bottom-3 left-3 rounded-full bg-red-500 px-3 py-1 text-xs font-semibold text-white">
             Out of Stock
           </span>
         ) : product.stock <= 5 ? (
-          <span className="badge badge-warning" style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem" }}>
-            Only {product.stock} left
+          <span className="absolute bottom-3 left-3 rounded-full bg-amber-500 px-3 py-1 text-xs font-semibold text-black">
+            Only {product.stock} Left
           </span>
         ) : null}
       </div>
 
-      {/* Product Content Details */}
-      <div style={{
-        padding: "1.25rem",
-        display: "flex",
-        flexDirection: "column",
-        flexGrow: 1,
-        gap: "0.5rem"
-      }}>
-        {/* Category & Artisan */}
-        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", color: "var(--muted-foreground)" }}>
+      {/* Content */}
+      <div className="flex flex-1 flex-col p-5">
+        
+        {/* Category + Artisan */}
+        <div className="mb-2 flex items-center justify-between text-xs text-slate-400">
           <span>{product.category}</span>
+
           {product.artisan && (
-            <span style={{ fontWeight: 600 }}>By {product.artisan.firstName}</span>
+            <span className="font-medium text-slate-300">
+              By {product.artisan.firstName}
+            </span>
           )}
         </div>
 
-        {/* Product Title */}
+        {/* Title */}
         <Link to={`/products/${product._id}`}>
-          <h3 style={{
-            fontSize: "1.1rem",
-            fontWeight: 700,
-            margin: "0.25rem 0",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap"
-          }}>
+          <h3 className="mb-2 line-clamp-2 text-lg font-bold text-white transition-colors hover:text-violet-400">
             {product.title}
           </h3>
         </Link>
 
-        {/* Reviews Rating */}
-        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <StarRating rating={product.rating} size={14} />
-          <span style={{ fontSize: "0.75rem", color: "var(--muted-foreground)" }}>
-            ({product.reviewsCount})
+        {/* Rating */}
+        <div className="mb-4 flex items-center gap-2">
+          <StarRating
+            rating={product.rating || 0}
+            size={14}
+          />
+
+          <span className="text-xs text-slate-400">
+            ({product.reviewsCount || 0})
           </span>
         </div>
 
-        {/* Price and Add to Cart Button */}
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginTop: "auto",
-          paddingTop: "0.5rem"
-        }}>
-          <span style={{
-            fontSize: "1.25rem",
-            fontFamily: "var(--font-display)",
-            fontWeight: 800,
-            color: "var(--foreground)"
-          }}>
-            ₹{(product.price || 0).toLocaleString("en-IN")}
-          </span>
+        {/* Bottom Section */}
+        <div className="mt-auto flex items-center justify-between border-t border-slate-800 pt-4">
+          
+          <div>
+            <p className="text-2xl font-extrabold text-white">
+              ₹
+              {(product.price || 0).toLocaleString(
+                "en-IN"
+              )}
+            </p>
+          </div>
 
           {(!user || user.role === "USER") && (
             <button
               onClick={handleCartClick}
-              disabled={adding || product.stock <= 0}
-              className="btn btn-primary"
-              style={{
-                padding: "0.5rem",
-                borderRadius: "var(--radius-md)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center"
-              }}
+              disabled={
+                adding || product.stock <= 0
+              }
+              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-violet-700 hover:to-fuchsia-700 disabled:cursor-not-allowed disabled:opacity-50"
             >
               <ShoppingCart size={16} />
+
+              {adding ? "Adding..." : "Add"}
             </button>
           )}
         </div>
       </div>
-      <style>{`
-        .product-card:hover .product-img {
-          transform: scale(1.05);
-        }
-        .action-btn:hover {
-          transform: scale(1.1);
-          background-color: var(--primary) !important;
-          color: white !important;
-        }
-      `}</style>
     </div>
   );
 };
+
 export default ProductCard;

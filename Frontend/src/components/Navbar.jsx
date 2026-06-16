@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
@@ -27,317 +28,274 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
+  const cartCount = cartItems.reduce(
+    (total, item) => total + (item.quantity || 1),
+    0
+  );
+
   const handleSearchSubmit = (e) => {
     e.preventDefault();
 
-    if (searchQuery.trim()) {
-      navigate(`/shop?search=${encodeURIComponent(searchQuery.trim())}`);
-      setMobileMenuOpen(false);
-    }
+    if (!searchQuery.trim()) return;
+
+    navigate(
+      `/shop?search=${encodeURIComponent(searchQuery.trim())}`
+    );
+
+    setMobileMenuOpen(false);
   };
 
   const handleLogout = async () => {
     try {
       await logout();
       navigate("/login");
-    } catch (error) {
-      console.error("Logout Error:", error);
+    } catch (err) {
+      console.error(err);
     }
   };
 
-  const cartCount = cartItems.reduce(
-    (total, item) => total + (item.quantity || 1),
-    0
-  );
-
   return (
-    <nav
-      className="glass navbar"
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        zIndex: 1000,
-        height: "70px",
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
-        {/* Logo */}
-        <Link
-          to="/"
-          onClick={() => setMobileMenuOpen(false)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            textDecoration: "none",
-          }}
-        >
-          <span
-            style={{
-              fontWeight: 800,
-              fontSize: "1.5rem",
-              background:
-                "linear-gradient(135deg,var(--primary),var(--accent))",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            ArtisanMarket
-          </span>
-        </Link>
+    <>
+      <nav className="fixed inset-x-0 top-0 z-50 h-16 border-b border-slate-200 dark:border-slate-800/40 bg-white/95 dark:bg-[#070b13]/90 backdrop-blur-md transition-colors duration-300">
+        <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-        {/* Search */}
-        <form
-          onSubmit={handleSearchSubmit}
-          className="search-form"
-          style={{
-            position: "relative",
-            maxWidth: "400px",
-            width: "100%",
-            display: "none",
-          }}
-        >
-          <input
-            type="text"
-            placeholder="Search handicrafts..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="form-input"
-            style={{
-              paddingRight: "2.5rem",
-            }}
-          />
-
-          <button
-            type="submit"
-            style={{
-              position: "absolute",
-              right: "10px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              border: "none",
-              background: "transparent",
-              cursor: "pointer",
-            }}
-          >
-            <Search size={18} />
-          </button>
-        </form>
-
-        {/* Desktop Menu */}
-        <div
-          className="desktop-nav"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "1.2rem",
-          }}
-        >
+          {/* Logo */}
           <Link
-            to="/shop"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.3rem",
-            }}
+            to="/"
+            className="flex items-center"
+            onClick={() => setMobileMenuOpen(false)}
           >
-            <Grid size={16} />
-            Shop
+            <span className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-2xl font-extrabold text-transparent">
+              ArtisanMarket
+            </span>
           </Link>
 
-          {user?.role === "USER" && (
-            <>
-              <Link to="/wishlist" style={{ position: "relative" }}>
-                <Heart
-                  size={22}
-                  style={{
-                    fill:
-                      wishlistItems.length > 0
-                        ? "var(--danger)"
-                        : "none",
-                    color:
-                      wishlistItems.length > 0
-                        ? "var(--danger)"
-                        : "inherit",
-                  }}
-                />
-
-                {wishlistItems.length > 0 && (
-                  <span
-                    className="badge badge-danger"
-                    style={{
-                      position: "absolute",
-                      top: "-8px",
-                      right: "-8px",
-                    }}
-                  >
-                    {wishlistItems.length}
-                  </span>
-                )}
-              </Link>
-
-              <Link to="/cart" style={{ position: "relative" }}>
-                <ShoppingBag size={22} />
-
-                {cartCount > 0 && (
-                  <span
-                    className="badge badge-primary"
-                    style={{
-                      position: "absolute",
-                      top: "-8px",
-                      right: "-8px",
-                    }}
-                  >
-                    {cartCount}
-                  </span>
-                )}
-              </Link>
-            </>
-          )}
-
-          {user?.role === "ARTISAN" && (
-            <Link to="/artisan" className="badge badge-primary">
-              Artisan Panel
-            </Link>
-          )}
-
-          {user?.role === "ADMIN" && (
-            <Link to="/admin" className="badge badge-danger">
-              Admin Panel
-            </Link>
-          )}
-
-          {/* Theme */}
-          <button
-            onClick={toggleTheme}
-            style={{
-              border: "none",
-              background: "transparent",
-              cursor: "pointer",
-            }}
+          {/* Desktop Search */}
+          <form
+            onSubmit={handleSearchSubmit}
+            className="relative hidden w-full max-w-md md:block"
           >
-            {theme === "dark" ? (
-              <Sun size={20} color="gold" />
-            ) : (
-              <Moon size={20} />
-            )}
-          </button>
+            <input
+              type="text"
+              placeholder="Search unique handicrafts..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full rounded-full border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#0f172a]/40 px-5 py-2 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-all"
+            />
 
-          {/* User */}
-          {user ? (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "1rem",
-              }}
+            <button
+              type="submit"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors"
             >
-              <Link
-                to="/profile"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                }}
+              <Search size={16} />
+            </button>
+          </form>
+
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-6 md:flex">
+
+            <Link
+              to="/shop"
+              className="flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-violet-600 dark:hover:text-white transition-colors"
+            >
+              <Grid size={18} />
+              Shop
+            </Link>
+
+            {user?.role === "USER" && (
+              <>
+                <Link
+                  to="/wishlist"
+                  className="relative text-slate-700 dark:text-slate-300 hover:text-white transition-colors"
+                >
+                  <Heart size={20} />
+
+                  {wishlistItems.length > 0 && (
+                    <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-xs text-white">
+                      {wishlistItems.length}
+                    </span>
+                  )}
+                </Link>
+
+                <Link
+                  to="/cart"
+                  className="relative text-slate-700 dark:text-slate-300 hover:text-white transition-colors"
+                >
+                  <ShoppingBag size={20} />
+
+                  {cartCount > 0 && (
+                    <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-600 px-1 text-xs text-white">
+                      {cartCount}
+                    </span>
+                  )}
+                </Link>
+              </>
+            )}
+
+            <button
+              onClick={toggleTheme}
+              className="rounded-lg p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#0f172a] hover:text-slate-900 dark:hover:text-white transition-all"
+            >
+              {theme === "dark" ? (
+                <Sun size={18} />
+              ) : (
+                <Moon size={18} />
+              )}
+            </button>
+
+            {user ? (
+              <div className="flex items-center gap-4">
+
+                <Link
+                  to="/profile"
+                  className="flex items-center gap-2"
+                >
+                  <img
+                    src={
+                      user.profileImageUrl ||
+                      "/default-avatar.png"
+                    }
+                    alt="profile"
+                    className="h-9 w-9 rounded-full object-cover ring-2 ring-violet-500"
+                  />
+
+                  <span className="font-semibold text-slate-700 dark:text-slate-300">
+                    {user.firstName}
+                  </span>
+                </Link>
+
+                <button
+                  onClick={handleLogout}
+                  className="text-red-500 hover:text-red-600"
+                >
+                  <LogOut size={18} />
+                </button>
+
+              </div>
+            ) : (
+              <div className="flex items-center gap-6">
+
+                <Link
+                  to="/login"
+                  className="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                >
+                  Log In
+                </Link>
+
+                <Link
+                  to="/register"
+                  className="rounded-xl bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-violet-700 transition-all shadow-[0_0_15px_rgba(124,58,237,0.35)]"
+                >
+                  Register
+                </Link>
+
+              </div>
+            )}
+          </div>
+
+          {/* Mobile Controls */}
+          <div className="flex items-center gap-3 md:hidden">
+
+            <button
+              onClick={toggleTheme}
+              className="text-slate-700 dark:text-slate-300"
+            >
+              {theme === "dark" ? (
+                <Sun size={20} />
+              ) : (
+                <Moon size={20} />
+              )}
+            </button>
+
+            <button
+              onClick={() =>
+                setMobileMenuOpen(!mobileMenuOpen)
+              }
+              className="text-slate-700 dark:text-slate-300"
+            >
+              {mobileMenuOpen ? (
+                <X size={24} />
+              ) : (
+                <Menu size={24} />
+              )}
+            </button>
+
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="border-t border-slate-200 dark:border-slate-800/40 bg-white dark:bg-[#070b13] md:hidden">
+            <div className="space-y-4 px-4 py-5">
+
+              <form
+                onSubmit={handleSearchSubmit}
+                className="relative"
               >
-                <img
-                  src={user.profileImageUrl || "/default-avatar.png"}
-                  alt="profile"
-                  style={{
-                    width: "32px",
-                    height: "32px",
-                    borderRadius: "50%",
-                    objectFit: "cover",
-                  }}
+                <input
+                  type="text"
+                  placeholder="Search unique handicrafts..."
+                  value={searchQuery}
+                  onChange={(e) =>
+                    setSearchQuery(e.target.value)
+                  }
+                  className="w-full rounded-full border border-slate-300 dark:border-slate-800/80 bg-white dark:bg-[#0f172a]/40 px-5 py-2.5 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-violet-500 focus:outline-none"
                 />
+              </form>
 
-                <span>{user.firstName}</span>
-              </Link>
-
-              <button
-                onClick={handleLogout}
-                style={{
-                  border: "none",
-                  background: "transparent",
-                  cursor: "pointer",
-                  color: "red",
-                }}
+              <Link
+                to="/shop"
+                className="block text-slate-700 dark:text-slate-300 hover:text-white"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                <LogOut size={20} />
-              </button>
-            </div>
-          ) : (
-            <div style={{ display: "flex", gap: "0.5rem" }}>
-              <Link to="/login" className="btn btn-ghost">
-                Login
+                Shop
               </Link>
 
-              <Link to="/register" className="btn btn-primary">
-                Register
-              </Link>
+              {user ? (
+                <>
+                  <Link
+                    to="/profile"
+                    className="block text-slate-700 dark:text-slate-300 hover:text-white"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Profile
+                  </Link>
+
+                  <button
+                    onClick={handleLogout}
+                    className="text-red-500 hover:text-red-600"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <div className="flex flex-col gap-3">
+
+                  <Link
+                    to="/login"
+                    className="rounded-xl border border-slate-300 dark:border-slate-800 px-4 py-2 text-center text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#0f172a] hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
+                    Log In
+                  </Link>
+
+                  <Link
+                    to="/register"
+                    className="rounded-xl bg-violet-600 px-4 py-2 text-center text-white hover:bg-violet-700 shadow-[0_0_15px_rgba(124,58,237,0.35)]"
+                  >
+                    Register
+                  </Link>
+
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          </div>
+        )}
+      </nav>
 
-        {/* Mobile Toggle */}
-        <div className="mobile-toggle" style={{ display: "none" }}>
-          <button
-            onClick={toggleTheme}
-            style={{
-              border: "none",
-              background: "transparent",
-              cursor: "pointer",
-            }}
-          >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            style={{
-              border: "none",
-              background: "transparent",
-              cursor: "pointer",
-            }}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </div>
-
-      <style>{`
-        @media(max-width:768px){
-          .desktop-nav{
-            display:none !important;
-          }
-
-          .mobile-toggle{
-            display:flex !important;
-            align-items:center;
-            gap:10px;
-          }
-        }
-
-        @media(min-width:769px){
-          .search-form{
-            display:block !important;
-          }
-        }
-      `}</style>
-    </nav>
+      <div className="h-16" />
+    </>
   );
 };
 
 export default Navbar;
+

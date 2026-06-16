@@ -1,497 +1,363 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { Upload, PencilLine, Package } from "lucide-react";
 
 const EditProduct = () => {
+  const { productId } = useParams();
+  const navigate = useNavigate();
 
-  const { productId } =
-    useParams();
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
 
-  const navigate =
-    useNavigate();
+  const [image, setImage] = useState(null);
+  const [preview, setPreview] = useState("");
 
-  const [loading, setLoading] =
-    useState(true);
+  const [formData, setFormData] = useState({
+    title: "",
+    description: "",
+    category: "",
+    price: "",
+    stock: "",
+    material: "",
+    dimensions: "",
+  });
 
-  const [saving, setSaving] =
-    useState(false);
+  const inputClasses =
+    "w-full rounded-xl border border-slate-700 bg-slate-800/80 px-4 py-3 text-white placeholder:text-slate-500 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/30";
 
-  const [image, setImage] =
-    useState(null);
+  // Fetch Product
+  const fetchProduct = async () => {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/artisan-api/products/${productId}`
+      );
 
-  const [formData, setFormData] =
-    useState({
-
-      title: "",
-
-      description: "",
-
-      category: "",
-
-      price: "",
-
-      stock: "",
-
-      material: "",
-
-      dimensions: "",
-    });
-
-  /*
-  ===========================
-  FETCH PRODUCT
-  ===========================
-  */
-
-  const fetchProduct =
-    async () => {
-
-      try {
-
-        const response =
-          await axios.get(
-
-            `https://artisanhandicraftmarketplace.onrender.com/artisan-api/products/${productId}`
-          );
-
-        const product =
-          response.data.payload;
-
-        setFormData({
-
-          title:
-            product.title || "",
-
-          description:
-            product.description || "",
-
-          category:
-            product.category || "",
-
-          price:
-            product.price || "",
-
-          stock:
-            product.stock || "",
-
-          material:
-            product.material || "",
-
-          dimensions:
-            product.dimensions || "",
-        });
-
-      }
-
-      catch (error) {
-
-        console.error(
-          error
-        );
-
-        alert(
-          "Failed to load product"
-        );
-      }
-
-      finally {
-
-        setLoading(false);
-      }
-    };
-
-  useEffect(() => {
-
-    fetchProduct();
-
-  }, []);
-
-  /*
-  ===========================
-  INPUT CHANGE
-  ===========================
-  */
-
-  const handleChange =
-    (e) => {
+      const product = response.data.payload;
 
       setFormData({
-
-        ...formData,
-
-        [e.target.name]:
-          e.target.value,
+        title: product.title || "",
+        description: product.description || "",
+        category: product.category || "",
+        price: product.price || "",
+        stock: product.stock || "",
+        material: product.material || "",
+        dimensions: product.dimensions || "",
       });
-    };
 
-  /*
-  ===========================
-  UPDATE PRODUCT
-  ===========================
-  */
+      if (product.image) {
+        setPreview(product.image);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Failed to load product");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  const handleSubmit =
-    async (e) => {
+  useEffect(() => {
+    fetchProduct();
+  }, []);
 
-      e.preventDefault();
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
-      try {
+  const handleImageChange = (e) => {
+    const file = e.target.files?.[0];
 
-        setSaving(true);
+    if (!file) return;
 
-        const token =
-          localStorage.getItem(
-            "token"
-          );
+    setImage(file);
+    setPreview(URL.createObjectURL(file));
+  };
 
-        const data =
-          new FormData();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-        Object.keys(
-          formData
-        ).forEach(key => {
+    try {
+      setSaving(true);
 
-          data.append(
-            key,
-            formData[key]
-          );
-        });
+      const token = localStorage.getItem("token");
 
-        if (image) {
+      const data = new FormData();
 
-          data.append(
-            "image",
-            image
-          );
+      Object.entries(formData).forEach(([key, value]) => {
+        data.append(key, value);
+      });
+
+      if (image) {
+        data.append("image", image);
+      }
+
+      const response = await axios.put(
+        `${import.meta.env.VITE_API_URL}/artisan-api/products/${productId}`,
+        data,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
+          },
         }
+      );
 
-        const response =
-          await axios.put(
+      alert(response.data.message);
+      navigate("/artisan/products");
+    } catch (error) {
+      console.error(error);
 
-            `https://artisanhandicraftmarketplace.onrender.com/artisan-api/products/${productId}`,
-
-            data,
-
-            {
-              headers: {
-
-                Authorization:
-                  `Bearer ${token}`,
-
-                "Content-Type":
-                  "multipart/form-data",
-              },
-            }
-          );
-
-        alert(
-          response.data.message
-        );
-
-        navigate(
-          "/artisan/products"
-        );
-
-      }
-
-      catch (error) {
-
-        console.error(
-          error
-        );
-
-        alert(
-
-          error.response?.data
-            ?.message ||
-
+      alert(
+        error.response?.data?.message ||
           "Failed to update product"
-        );
-      }
+      );
+    } finally {
+      setSaving(false);
+    }
+  };
 
-      finally {
-
-        setSaving(false);
-      }
-    };
-
+  // Loading Screen
   if (loading) {
-
     return (
-
-      <div className="container py-5">
-
-        <h3>
-          Loading Product...
-        </h3>
-
+      <div className="flex min-h-screen items-center justify-center bg-slate-950">
+        <div className="flex flex-col items-center gap-4">
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-slate-700 border-t-violet-500" />
+          <p className="text-slate-300">
+            Loading Product...
+          </p>
+        </div>
       </div>
     );
   }
 
   return (
+    <div className="min-h-screen bg-slate-950 px-4 py-10">
+      <div className="mx-auto max-w-4xl">
+        
+        {/* Card */}
+        <div className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/80 shadow-2xl backdrop-blur-xl">
+          
+          {/* Header */}
+          <div className="border-b border-slate-800 p-6">
+            <div className="flex items-center gap-3">
+              <PencilLine
+                size={28}
+                className="text-violet-500"
+              />
 
-    <div className="container py-5">
-
-      <div className="row justify-content-center">
-
-        <div className="col-md-8">
-
-          <div className="card shadow">
-
-            <div className="card-body">
-
-              <h2 className="mb-4">
-
+              <h1 className="bg-gradient-to-r from-violet-400 via-fuchsia-500 to-pink-500 bg-clip-text text-3xl font-bold text-transparent">
                 Edit Product
-
-              </h2>
-
-              <form
-                onSubmit={
-                  handleSubmit
-                }
-              >
-
-                <div className="mb-3">
-
-                  <label>
-
-                    Product Title
-
-                  </label>
-
-                  <input
-                    type="text"
-                    name="title"
-                    className="form-control"
-                    required
-                    value={
-                      formData.title
-                    }
-                    onChange={
-                      handleChange
-                    }
-                  />
-
-                </div>
-
-                <div className="mb-3">
-
-                  <label>
-
-                    Description
-
-                  </label>
-
-                  <textarea
-                    name="description"
-                    rows="4"
-                    className="form-control"
-                    required
-                    value={
-                      formData.description
-                    }
-                    onChange={
-                      handleChange
-                    }
-                  />
-
-                </div>
-
-                <div className="mb-3">
-
-                  <label>
-
-                    Category
-
-                  </label>
-
-                  <select
-                    name="category"
-                    className="form-control"
-                    required
-                    value={
-                      formData.category
-                    }
-                    onChange={
-                      handleChange
-                    }
-                  >
-
-                    <option value="">
-                      Select Category
-                    </option>
-
-                    <option>
-                      Wood Craft
-                    </option>
-
-                    <option>
-                      Pottery
-                    </option>
-
-                    <option>
-                      Jewelry
-                    </option>
-
-                    <option>
-                      Textiles
-                    </option>
-
-                    <option>
-                      Painting
-                    </option>
-
-                    <option>
-                      Home Decor
-                    </option>
-
-                  </select>
-
-                </div>
-
-                <div className="row">
-
-                  <div className="col-md-6 mb-3">
-
-                    <label>
-
-                      Price
-
-                    </label>
-
-                    <input
-                      type="number"
-                      name="price"
-                      className="form-control"
-                      required
-                      value={
-                        formData.price
-                      }
-                      onChange={
-                        handleChange
-                      }
-                    />
-
-                  </div>
-
-                  <div className="col-md-6 mb-3">
-
-                    <label>
-
-                      Stock
-
-                    </label>
-
-                    <input
-                      type="number"
-                      name="stock"
-                      className="form-control"
-                      required
-                      value={
-                        formData.stock
-                      }
-                      onChange={
-                        handleChange
-                      }
-                    />
-
-                  </div>
-
-                </div>
-
-                <div className="mb-3">
-
-                  <label>
-
-                    Material
-
-                  </label>
-
-                  <input
-                    type="text"
-                    name="material"
-                    className="form-control"
-                    value={
-                      formData.material
-                    }
-                    onChange={
-                      handleChange
-                    }
-                  />
-
-                </div>
-
-                <div className="mb-3">
-
-                  <label>
-
-                    Dimensions
-
-                  </label>
-
-                  <input
-                    type="text"
-                    name="dimensions"
-                    className="form-control"
-                    value={
-                      formData.dimensions
-                    }
-                    onChange={
-                      handleChange
-                    }
-                  />
-
-                </div>
-
-                <div className="mb-3">
-
-                  <label>
-
-                    Replace Image
-                    (Optional)
-
-                  </label>
-
-                  <input
-                    type="file"
-                    className="form-control"
-                    accept="image/*"
-                    onChange={(e) =>
-                      setImage(
-                        e.target.files[0]
-                      )
-                    }
-                  />
-
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  disabled={saving}
-                >
-
-                  {saving
-                    ? "Updating..."
-                    : "Update Product"}
-
-                </button>
-
-              </form>
-
+              </h1>
             </div>
 
+            <p className="mt-2 text-sm text-slate-400">
+              Update your handcrafted product details.
+            </p>
           </div>
 
+          {/* Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 p-6"
+          >
+            {/* Title */}
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-300">
+                Product Title
+              </label>
+
+              <input
+                type="text"
+                name="title"
+                required
+                value={formData.title}
+                onChange={handleChange}
+                className={inputClasses}
+              />
+            </div>
+
+            {/* Description */}
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-300">
+                Description
+              </label>
+
+              <textarea
+                rows={5}
+                name="description"
+                required
+                value={formData.description}
+                onChange={handleChange}
+                className={`${inputClasses} resize-none`}
+              />
+            </div>
+
+            {/* Category */}
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-300">
+                Category
+              </label>
+
+              <select
+                name="category"
+                required
+                value={formData.category}
+                onChange={handleChange}
+                className={inputClasses}
+              >
+                <option value="">
+                  Select Category
+                </option>
+
+                <option value="Wood Craft">
+                  Wood Craft
+                </option>
+
+                <option value="Pottery">
+                  Pottery
+                </option>
+
+                <option value="Jewelry">
+                  Jewelry
+                </option>
+
+                <option value="Textiles">
+                  Textiles
+                </option>
+
+                <option value="Painting">
+                  Painting
+                </option>
+
+                <option value="Home Decor">
+                  Home Decor
+                </option>
+              </select>
+            </div>
+
+            {/* Price & Stock */}
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-300">
+                  Price (₹)
+                </label>
+
+                <input
+                  type="number"
+                  min="1"
+                  name="price"
+                  required
+                  value={formData.price}
+                  onChange={handleChange}
+                  className={inputClasses}
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-300">
+                  Stock
+                </label>
+
+                <input
+                  type="number"
+                  min="0"
+                  name="stock"
+                  required
+                  value={formData.stock}
+                  onChange={handleChange}
+                  className={inputClasses}
+                />
+              </div>
+            </div>
+
+            {/* Material & Dimensions */}
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-300">
+                  Material
+                </label>
+
+                <input
+                  type="text"
+                  name="material"
+                  value={formData.material}
+                  onChange={handleChange}
+                  className={inputClasses}
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-300">
+                  Dimensions
+                </label>
+
+                <input
+                  type="text"
+                  name="dimensions"
+                  value={formData.dimensions}
+                  onChange={handleChange}
+                  className={inputClasses}
+                />
+              </div>
+            </div>
+
+            {/* Image Upload */}
+            <div>
+              <label className="mb-3 block text-sm font-medium text-slate-300">
+                Replace Product Image
+              </label>
+
+              <label className="flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-700 bg-slate-800/50 p-8 transition hover:border-violet-500">
+                <Upload
+                  size={40}
+                  className="mb-3 text-violet-500"
+                />
+
+                <span className="text-slate-300">
+                  Click to upload new image
+                </span>
+
+                <span className="mt-1 text-xs text-slate-500">
+                  Optional
+                </span>
+
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="hidden"
+                />
+              </label>
+
+              {preview && (
+                <div className="mt-4 overflow-hidden rounded-2xl border border-slate-700">
+                  <img
+                    src={preview}
+                    alt="Product Preview"
+                    className="h-72 w-full object-cover"
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={saving}
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:from-violet-700 hover:to-fuchsia-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              <Package size={18} />
+
+              {saving
+                ? "Updating Product..."
+                : "Update Product"}
+            </button>
+          </form>
         </div>
-
       </div>
-
     </div>
   );
 };

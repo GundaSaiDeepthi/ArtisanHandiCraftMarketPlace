@@ -3,12 +3,18 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import api from "../services/api";
 import { motion } from "framer-motion";
+import {
+  ShoppingBag,
+  CreditCard,
+  AlertCircle,
+  Package,
+} from "lucide-react";
 
 const Checkout = () => {
   const { cartItems, totalAmount, clearCart } = useCart();
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -16,10 +22,9 @@ const Checkout = () => {
     if (cartItems.length === 0) return;
 
     setLoading(true);
-    setError(null);
+    setError("");
 
     try {
-      // Create Razorpay Order
       const createRes = await api.post(
         "/payment-api/create-order",
         {
@@ -35,15 +40,10 @@ const Checkout = () => {
 
       const options = {
         key: import.meta.env.VITE_RAZORPAY_KEY_ID,
-
         amount: order.amount,
-
         currency: order.currency,
-
         name: "Artisan Marketplace",
-
-        description: "Handicraft Purchase",
-
+        description: "Handcrafted Products Purchase",
         order_id: order.id,
 
         handler: async function (response) {
@@ -76,7 +76,6 @@ const Checkout = () => {
             navigate("/");
           } catch (err) {
             console.error(err);
-
             alert("Payment Verification Failed");
           }
         },
@@ -87,19 +86,18 @@ const Checkout = () => {
         },
 
         theme: {
-          color: "#3399cc",
+          color: "#7c3aed",
         },
       };
 
       const razorpay = new window.Razorpay(options);
-
       razorpay.open();
     } catch (err) {
       console.error(err);
 
       setError(
         err.response?.data?.message ||
-          "Checkout Failed"
+          "Checkout failed. Please try again."
       );
     } finally {
       setLoading(false);
@@ -108,50 +106,113 @@ const Checkout = () => {
 
   return (
     <motion.div
-      className="checkout-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
+      className="mx-auto max-w-5xl px-4 py-10"
     >
-      <h1>Checkout</h1>
+      {/* Header */}
+      <div className="mb-8">
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-violet-100 px-4 py-2 text-sm font-medium text-violet-600 dark:bg-violet-500/10 dark:text-violet-300">
+          <ShoppingBag size={14} />
+          Secure Checkout
+        </div>
 
-      {error && (
-        <p style={{ color: "red" }}>
-          {error}
+        <h1 className="text-4xl font-bold text-slate-900 dark:text-white">
+          Complete Your Order
+        </h1>
+
+        <p className="mt-2 text-slate-500 dark:text-slate-400">
+          Review your handcrafted treasures before payment.
         </p>
+      </div>
+
+      {/* Error */}
+      {error && (
+        <div className="mb-6 flex items-center gap-2 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-red-600 dark:border-red-900 dark:bg-red-500/10 dark:text-red-400">
+          <AlertCircle size={18} />
+          {error}
+        </div>
       )}
 
+      {/* Empty Cart */}
       {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
-        <>
-          <ul>
-            {cartItems.map((item) => (
-              <li key={item.product?._id}>
-                {item.product?.title} × {item.quantity}
-                {" = "}₹
-                {(
-                  (item.product?.price || 0) *
-                  item.quantity
-                ).toFixed(2)}
-              </li>
-            ))}
-          </ul>
+        <div className="rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-lg dark:border-slate-800 dark:bg-slate-900">
+          <Package
+            size={50}
+            className="mx-auto mb-4 text-slate-400"
+          />
 
-          <h2>
-            Total: ₹
-            {Number(totalAmount).toFixed(2)}
+          <h2 className="mb-2 text-xl font-semibold text-slate-900 dark:text-white">
+            Your Cart is Empty
           </h2>
 
-          <button
-            onClick={handlePlaceOrder}
-            disabled={loading}
-          >
-            {loading
-              ? "Processing..."
-              : "Pay Now"}
-          </button>
-        </>
+          <p className="text-slate-500 dark:text-slate-400">
+            Add some beautiful handcrafted products first.
+          </p>
+        </div>
+      ) : (
+        <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl dark:border-slate-800 dark:bg-slate-900">
+          {/* Order Summary */}
+          <div className="border-b border-slate-200 p-6 dark:border-slate-800">
+            <h2 className="mb-5 text-2xl font-bold text-slate-900 dark:text-white">
+              Order Summary
+            </h2>
+
+            <div className="space-y-4">
+              {cartItems.map((item) => (
+                <div
+                  key={item.product?._id}
+                  className="flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800/50"
+                >
+                  <div>
+                    <h3 className="font-semibold text-slate-900 dark:text-white">
+                      {item.product?.title}
+                    </h3>
+
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                      Quantity: {item.quantity}
+                    </p>
+                  </div>
+
+                  <span className="font-bold text-violet-600 dark:text-violet-400">
+                    ₹
+                    {(
+                      (item.product?.price || 0) *
+                      item.quantity
+                    ).toFixed(2)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Total */}
+          <div className="flex items-center justify-between border-b border-slate-200 px-6 py-5 dark:border-slate-800">
+            <span className="text-xl font-semibold text-slate-900 dark:text-white">
+              Total Amount
+            </span>
+
+            <span className="text-3xl font-bold text-violet-600 dark:text-violet-400">
+              ₹{Number(totalAmount).toFixed(2)}
+            </span>
+          </div>
+
+          {/* Payment Button */}
+          <div className="p-6">
+            <button
+              onClick={handlePlaceOrder}
+              disabled={loading}
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-violet-600 px-6 py-4 font-semibold text-white transition hover:bg-violet-700 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              <CreditCard size={20} />
+
+              {loading
+                ? "Processing Payment..."
+                : "Pay Now"}
+            </button>
+          </div>
+        </div>
       )}
     </motion.div>
   );

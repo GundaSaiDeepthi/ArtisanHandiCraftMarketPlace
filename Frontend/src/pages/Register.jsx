@@ -10,775 +10,328 @@ import {
   Key,
   Camera,
   AlertCircle,
-  FileText,
 } from "lucide-react";
 
-const Register = () => {
-  const {
-    registerUser,
-    registerArtisan,
-    error,
-    clearError,
-  } = useAuth();
+const inputClass =
+  "w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 pl-10 pr-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition";
 
+const iconClass =
+  "absolute left-3 top-1/2 -translate-y-1/2 text-slate-400";
+
+const Register = () => {
+  const { registerUser, registerArtisan, error, clearError } = useAuth();
   const navigate = useNavigate();
 
   const [role, setRole] = useState("");
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] =
-    useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [password, setPassword] =
-    useState("");
+  const [artisanBio, setArtisanBio] = useState("");
+  const [artisanSpecialization, setArtisanSpecialization] = useState("");
+  const [artisanExperience, setArtisanExperience] = useState("");
 
-  const [artisanBio, setArtisanBio] =
-    useState("");
+  const [profileImage, setProfileImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
 
-  const [
-    artisanSpecialization,
-    setArtisanSpecialization,
-  ] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [localError, setLocalError] = useState("");
 
-  const [
-    artisanExperience,
-    setArtisanExperience,
-  ] = useState("");
+  useEffect(() => {
+    clearError();
 
-  const [profileImage, setProfileImage] =
-    useState(null);
-
-  const [imagePreview, setImagePreview] =
-    useState(null);
-
-  const [loading, setLoading] =
-    useState(false);
-
-  const [localError, setLocalError] =
-    useState("");
-
- useEffect(() => {
-  clearError();
-
-  return () => {
-    if (imagePreview) {
-      URL.revokeObjectURL(imagePreview);
-    }
-  };
-}, [imagePreview]);
-
-  const handleImageChange = (e) => {
-    const file = e.target.files?.[0];
-
-    if (!file) return;
-
-    setProfileImage(file);
-    setImagePreview(
-      URL.createObjectURL(file)
-    );
-  };
+    return () => {
+      if (imagePreview) {
+        URL.revokeObjectURL(imagePreview);
+      }
+    };
+  }, [imagePreview, clearError]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!role) {
-      return setLocalError(
-        "Please select an account type."
-      );
-    }
+    setLocalError("");
 
-    if (!firstName.trim()) {
-      return setLocalError(
-        "First name is required."
-      );
-    }
-
-    if (!email.trim()) {
-      return setLocalError(
-        "Email is required."
-      );
-    }
-
-    if (password.length < 8) {
-      return setLocalError(
-        "Password must be at least 8 characters."
-      );
-    }
-
-    if (
-      phoneNumber &&
-      !/^[0-9]{10}$/.test(phoneNumber)
-    ) {
-      return setLocalError(
-        "Phone number must contain exactly 10 digits."
-      );
-    }
-
-    if (role === "ARTISAN") {
-      if (
-        !artisanSpecialization.trim() ||
-        !artisanBio.trim() ||
-        !artisanExperience
-      ) {
-        return setLocalError(
-          "Please fill all artisan details."
-        );
-      }
-    }
+    if (!role) return setLocalError("Please select account type");
+    if (!firstName) return setLocalError("First name is required");
+    if (!email) return setLocalError("Email is required");
+    if (!password) return setLocalError("Password is required");
 
     try {
       setLoading(true);
-      setLocalError("");
-      clearError();
 
       const formData = new FormData();
 
-      formData.append(
-        "firstName",
-        firstName.trim()
-      );
-
-      formData.append(
-        "lastName",
-        lastName.trim()
-      );
-
-      formData.append(
-        "email",
-        email.toLowerCase().trim()
-      );
-
-      formData.append(
-        "password",
-        password
-      );
-
-      formData.append(
-        "phoneNumber",
-        phoneNumber
-      );
+      formData.append("firstName", firstName);
+      formData.append("lastName", lastName);
+      formData.append("email", email);
+      formData.append("phoneNumber", phoneNumber);
+      formData.append("password", password);
 
       if (profileImage) {
-        formData.append(
-          "profileImageUrl",
-          profileImage
-        );
+        formData.append("profileImageUrl", profileImage);
       }
 
-      if (role === "USER") {
-        await registerUser(formData);
-      } else {
-        formData.append(
-          "artisanBio",
-          artisanBio.trim()
-        );
-
+      if (role === "ARTISAN") {
+        formData.append("artisanBio", artisanBio);
         formData.append(
           "artisanSpecialization",
-          artisanSpecialization.trim()
+          artisanSpecialization
         );
-
         formData.append(
           "artisanExperience",
           artisanExperience
         );
 
         await registerArtisan(formData);
+      } else {
+        await registerUser(formData);
       }
 
-      navigate(
-        `/verify-otp?email=${encodeURIComponent(
-          email.toLowerCase().trim()
-        )}`
-      );
+      navigate(`/verify-otp?email=${email}`);
     } catch (err) {
-      setLocalError(
-        err.message ||
-          "Registration failed."
-      );
+      console.error(err);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "85vh",
-        padding: "2rem 0",
-      }}
-    >
-      <div
-        className="glass-card"
-        style={{
-          maxWidth: "700px",
-          width: "100%",
-          padding: "2.5rem",
-          borderRadius:
-            "var(--radius-2xl)",
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "2rem",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "1.8rem",
-              fontWeight: 800,
-            }}
-          >
-            Create Account
-          </h2>
+    <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-br from-slate-50 via-white to-violet-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
 
-          <p
-            style={{
-              color:
-                "var(--muted-foreground)",
-            }}
-          >
+      <div className="w-full max-w-3xl rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-8 md:p-10 shadow-2xl">
+
+        {/* Header */}
+        <div className="text-center mb-8">
+
+          <div className="inline-flex items-center gap-2 rounded-full bg-violet-100 dark:bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-600 dark:text-violet-300 mb-4">
+            <UserPlus size={14} />
             Join Artisan Marketplace
-            today
+          </div>
+
+          <h1 className="text-4xl font-bold text-slate-900 dark:text-white">
+            Create Account
+          </h1>
+
+          <p className="mt-2 text-slate-500 dark:text-slate-400">
+            Connect with artisans and discover handcrafted treasures
           </p>
         </div>
 
         {(localError || error) && (
-          <div
-            className="badge badge-danger"
-            style={{
-              display: "flex",
-              gap: "0.5rem",
-              marginBottom: "1rem",
-              width: "100%",
-            }}
-          >
+          <div className="mb-6 flex items-center gap-2 rounded-xl border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-500/10 px-4 py-3 text-red-600 dark:text-red-400">
             <AlertCircle size={16} />
-            <span>
-              {localError || error}
-            </span>
+            <span>{localError || error}</span>
           </div>
         )}
 
-        {/* Account Type */}
+        {/* Role Selection */}
+        <div className="grid grid-cols-2 gap-4 mb-8">
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "1fr 1fr",
-            gap: "1rem",
-            marginBottom: "2rem",
-          }}
-        >
-          <div
-              onClick={() => {
-    setRole("USER");
-
-    setArtisanBio("");
-    setArtisanExperience("");
-    setArtisanSpecialization("");
-  }}
-            style={{
-  cursor: "pointer",
-  padding: "1rem",
-
-  border:
-    role === "USER"
-      ? "2px solid var(--primary)"
-      : "1px solid var(--border)",
-
-  background:
-    role === "USER"
-      ? "rgba(59,130,246,0.08)"
-      : "transparent",
-        boxShadow:
-    role === "USER"
-      ? "0 4px 15px rgba(0,0,0,0.08)"
-      : "none",
-
-  borderRadius: "16px",
-
-  textAlign: "center",
-
-  transition:
-    "all 0.3s ease",
-}}
+          <button
+            type="button"
+            onClick={() => setRole("USER")}
+            className={`rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-1 ${
+              role === "USER"
+                ? "border-violet-500 bg-violet-50 dark:bg-violet-500/10 shadow-lg"
+                : "border-slate-200 dark:border-slate-700 hover:border-violet-400"
+            }`}
           >
-            <User size={40} />
+            <User
+              size={40}
+              className={`mx-auto ${
+                role === "USER"
+                  ? "text-violet-600"
+                  : "text-slate-600 dark:text-slate-300"
+              }`}
+            />
 
-            <h5>Customer</h5>
-
-            <p>
-              Buy Handmade Products
+            <p className="mt-3 font-semibold text-slate-900 dark:text-white">
+              Customer
             </p>
-          </div>
+          </button>
 
-          <div
-            onClick={() =>
-              setRole("ARTISAN")
-            }
-           style={{
-  cursor: "pointer",
-
-  padding: "1rem",
-
-  border:
-    role === "ARTISAN"
-      ? "2px solid var(--primary)"
-      : "1px solid var(--border)",
-
-  background:
-    role === "ARTISAN"
-      ? "rgba(59,130,246,0.08)"
-      : "transparent",
-
-       boxShadow:
-    role === "ARTISAN"
-      ? "0 4px 15px rgba(0,0,0,0.08)"
-      : "none",
-
-  borderRadius: "16px",
-
-  textAlign: "center",
-
-  transition:
-    "all 0.3s ease",
-}}
+          <button
+            type="button"
+            onClick={() => setRole("ARTISAN")}
+            className={`rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-1 ${
+              role === "ARTISAN"
+                ? "border-violet-500 bg-violet-50 dark:bg-violet-500/10 shadow-lg"
+                : "border-slate-200 dark:border-slate-700 hover:border-violet-400"
+            }`}
           >
-            <Briefcase size={40} />
+            <Briefcase
+              size={40}
+              className={`mx-auto ${
+                role === "ARTISAN"
+                  ? "text-violet-600"
+                  : "text-slate-600 dark:text-slate-300"
+              }`}
+            />
 
-            <h5>Artisan</h5>
-
-            <p>
-              Sell Handmade Products
+            <p className="mt-3 font-semibold text-slate-900 dark:text-white">
+              Artisan
             </p>
+          </button>
+        </div>
+
+        {/* Profile Image */}
+        <div className="flex justify-center mb-8">
+          <div className="relative group">
+
+            <img
+              src={imagePreview || "/default-avatar.jpg"}
+              alt="Profile"
+              className="h-36 w-36 rounded-full border-4 border-violet-500 object-cover shadow-xl transition-transform duration-300 group-hover:scale-105"
+            />
+
+            <label className="absolute bottom-2 right-2 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-violet-600 text-white shadow-lg hover:bg-violet-700 transition">
+              <Camera size={16} />
+
+              <input
+                type="file"
+                accept="image/*"
+                hidden
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+
+                  if (file) {
+                    setProfileImage(file);
+                    setImagePreview(
+                      URL.createObjectURL(file)
+                    );
+                  }
+                }}
+              />
+            </label>
           </div>
         </div>
-{/* Profile Image */}
 
-<div
-  style={{
-    display: "flex",
-    justifyContent: "center",
-    marginBottom: "1.5rem",
-  }}
->
-  <div
-    style={{
-      width: "140px",
-      height: "140px",
-      position: "relative",
-    }}
-  >
-    <img
-      src={
-        imagePreview ||
-        "/default-avatar.jpg"
-      }
-      alt="Profile"
-      style={{
-        width: "100%",
-        height: "100%",
-        borderRadius: "50%",
-        objectFit: "cover",
-        border:
-          "4px solid var(--primary)",
-      }}
-    />
+        <form onSubmit={handleSubmit} className="space-y-4">
 
-    <label
-      style={{
-        position: "absolute",
-        right: 5,
-        bottom: 5,
-        background:
-          "var(--primary)",
-        width: "35px",
-        height: "35px",
-        borderRadius: "50%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        cursor: "pointer",
-      }}
-    >
-      <Camera
-        size={16}
-        color="#fff"
-      />
+          <div className="grid md:grid-cols-2 gap-4">
 
-      <input
-        type="file"
-        hidden
-        accept="image/*"
-        onChange={handleImageChange}
-      />
-    </label>
-  </div>
-</div>
+            <div className="relative">
+              <User className={iconClass} size={16} />
+              <input
+                className={inputClass}
+                placeholder="First Name"
+                value={firstName}
+                onChange={(e) =>
+                  setFirstName(e.target.value)
+                }
+              />
+            </div>
 
-        <form
-          onSubmit={handleSubmit}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-          }}
-        >
-         <div className="form-group">
-  <label className="form-label">
-    First Name
-  </label>
+            <div className="relative">
+              <User className={iconClass} size={16} />
+              <input
+                className={inputClass}
+                placeholder="Last Name"
+                value={lastName}
+                onChange={(e) =>
+                  setLastName(e.target.value)
+                }
+              />
+            </div>
+          </div>
 
-  <div
-    style={{
-      position: "relative",
-    }}
-  >
-    {/* FirstName*/}
-    <input
-      type="text"
-      value={firstName}
-      required
-      onChange={(e) =>
-        setFirstName(e.target.value)
-      }
-      className="form-input"
-      placeholder="John"
-      style={{
-        paddingLeft: "2.5rem",
-      }}
-    />
+          <div className="relative">
+            <Mail className={iconClass} size={16} />
+            <input
+              className={inputClass}
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-    <User
-      size={16}
-      style={{
-        position: "absolute",
-        left: "0.85rem",
-        top: "50%",
-        transform:
-          "translateY(-50%)",
-        color:
-          "var(--muted-foreground)",
-      }}
-    />
-  </div>
-</div>
-{/* Last Name */}
-         <div className="form-group">
-  <label className="form-label">
-    Last Name
-  </label>
+          <div className="relative">
+            <Phone className={iconClass} size={16} />
+            <input
+              className={inputClass}
+              placeholder="Phone Number"
+              value={phoneNumber}
+              onChange={(e) =>
+                setPhoneNumber(e.target.value)
+              }
+            />
+          </div>
 
-  <div style={{ position: "relative" }}>
-    <input
-      type="text"
-      value={lastName}
-      onChange={(e) =>
-        setLastName(e.target.value)
-      }
-      className="form-input"
-      placeholder="Doe"
-      style={{
-        paddingLeft: "2.5rem",
-      }}
-    />
+          <div className="relative">
+            <Key className={iconClass} size={16} />
+            <input
+              type="password"
+              className={inputClass}
+              placeholder="Password"
+              value={password}
+              onChange={(e) =>
+                setPassword(e.target.value)
+              }
+            />
+          </div>
 
-    <User
-      size={16}
-      style={{
-        position: "absolute",
-        left: "0.85rem",
-        top: "50%",
-        transform:
-          "translateY(-50%)",
-        color:
-          "var(--muted-foreground)",
-      }}
-    />
-  </div>
-</div>
-{/* Email*/}
-         <div className="form-group">
-  <label className="form-label">
-    Email Address
-  </label>
+          {role === "ARTISAN" && (
+            <div className="space-y-4 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
 
-  <div style={{ position: "relative" }}>
-    <input
-      type="email"
-      value={email}
-      required
-      onChange={(e) =>
-        setEmail(e.target.value)
-      }
-      className="form-input"
-      placeholder="you@example.com"
-      style={{
-        paddingLeft: "2.5rem",
-      }}
-    />
+              <input
+                className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-slate-900 dark:text-white"
+                placeholder="Specialization"
+                value={artisanSpecialization}
+                onChange={(e) =>
+                  setArtisanSpecialization(
+                    e.target.value
+                  )
+                }
+              />
 
-    <Mail
-      size={16}
-      style={{
-        position: "absolute",
-        left: "0.85rem",
-        top: "50%",
-        transform:
-          "translateY(-50%)",
-        color:
-          "var(--muted-foreground)",
-      }}
-    />
-  </div>
-</div>
-{/* Phone Number */}
+              <input
+                className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-slate-900 dark:text-white"
+                placeholder="Years of Experience"
+                value={artisanExperience}
+                onChange={(e) =>
+                  setArtisanExperience(
+                    e.target.value
+                  )
+                }
+              />
 
-        <div className="form-group">
-  <label className="form-label">
-    Phone Number
-  </label>
+              <textarea
+                rows="4"
+                className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-slate-900 dark:text-white"
+                placeholder="Tell customers about your craft..."
+                value={artisanBio}
+                onChange={(e) =>
+                  setArtisanBio(e.target.value)
+                }
+              />
+            </div>
+          )}
 
-  <div style={{ position: "relative" }}>
-    <input
-      type="tel"
-      value={phoneNumber}
-      required
-      onChange={(e) =>
-        setPhoneNumber(e.target.value)
-      }
-      className="form-input"
-      placeholder="9876543210"
-      style={{
-        paddingLeft: "2.5rem",
-      }}
-    />
-
-    <Phone
-      size={16}
-      style={{
-        position: "absolute",
-        left: "0.85rem",
-        top: "50%",
-        transform:
-          "translateY(-50%)",
-        color:
-          "var(--muted-foreground)",
-      }}
-    />
-  </div>
-</div>
-{/* Password */}
-
-         <div className="form-group">
-  <label className="form-label">
-    Password
-  </label>
-
-  <div style={{ position: "relative" }}>
-    <input
-      type="password"
-      value={password}
-      required
-      onChange={(e) =>
-        setPassword(e.target.value)
-      }
-      className="form-input"
-      placeholder="Minimum 8 characters(1 uppercase, 1 lowercase, 1 number, 1 special character)"
-      style={{
-        paddingLeft: "2.5rem",
-      }}
-    />
-
-    <Key
-      size={16}
-      style={{
-        position: "absolute",
-        left: "0.85rem",
-        top: "50%",
-        transform:
-          "translateY(-50%)",
-        color:
-          "var(--muted-foreground)",
-      }}
-    />
-  </div>
-</div>
-
-
-        {role === "ARTISAN" && (
-  <>
-    {/* Specialization */}
-
-    <div className="form-group">
-      <label className="form-label">
-        Specialization
-      </label>
-
-      <div
-        style={{
-          position: "relative",
-        }}
-      >
-        <input
-          type="text"
-          value={artisanSpecialization}
-          required
-          onChange={(e) =>
-            setArtisanSpecialization(
-              e.target.value
-            )
-          }
-          className="form-input"
-          placeholder="Wood Carving"
-          style={{
-            paddingLeft: "2.5rem",
-          }}
-        />
-
-        <Briefcase
-          size={16}
-          style={{
-            position: "absolute",
-            left: "0.85rem",
-            top: "50%",
-            transform:
-              "translateY(-50%)",
-            color:
-              "var(--muted-foreground)",
-          }}
-        />
-      </div>
-    </div>
-
-    {/* Experience */}
-
-    <div className="form-group">
-      <label className="form-label">
-        Experience (Years)
-      </label>
-
-      <div
-        style={{
-          position: "relative",
-        }}
-      >
-        <input
-          type="number"
-          value={artisanExperience}
-          required
-          onChange={(e) =>
-            setArtisanExperience(
-              e.target.value
-            )
-          }
-          className="form-input"
-          placeholder="5"
-          style={{
-            paddingLeft: "2.5rem",
-          }}
-        />
-
-        <FileText
-          size={16}
-          style={{
-            position: "absolute",
-            left: "0.85rem",
-            top: "50%",
-            transform:
-              "translateY(-50%)",
-            color:
-              "var(--muted-foreground)",
-          }}
-        />
-      </div>
-    </div>
-
-    {/* Bio */}
-
-    <div className="form-group">
-      <label className="form-label">
-        Artisan Bio
-      </label>
-
-      <div
-        style={{
-          position: "relative",
-        }}
-      >
-        <textarea
-          rows="4"
-          value={artisanBio}
-          required
-          onChange={(e) =>
-            setArtisanBio(
-              e.target.value
-            )
-          }
-          className="form-input"
-          placeholder="Tell customers about your skills, products and experience..."
-          style={{
-            paddingLeft: "2.5rem",
-            resize: "vertical",
-          }}
-        />
-
-        <FileText
-          size={16}
-          style={{
-            position: "absolute",
-            left: "0.85rem",
-            top: "18px",
-            color:
-              "var(--muted-foreground)",
-          }}
-        />
-      </div>
-    </div>
-  </>
-)}
-
-         <button
-  type="submit"
-  disabled={loading}
-  className="btn btn-primary"
-  style={{
-    width: "100%",
-    padding: "0.75rem",
-    gap: "0.5rem",
-    marginTop: "0.5rem",
-  }}
->
-  <UserPlus size={18} />
-
-  {loading
-    ? "Creating Account..."
-    : role === "ARTISAN"
-    ? "Register as Artisan"
-    : "Register as Customer"}
-</button>
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.01] hover:shadow-violet-500/25 disabled:opacity-50"
+          >
+            <UserPlus size={18} />
+            {loading ? "Creating Account..." : "Create Account"}
+          </button>
         </form>
 
-        <div
-          style={{
-            textAlign: "center",
-            marginTop: "1.5rem",
-          }}
-        >
+        <div className="my-6 border-t border-slate-200 dark:border-slate-800" />
+
+        <p className="text-center text-slate-500 dark:text-slate-400">
           Already have an account?{" "}
-          <Link to="/login">
+          <Link
+            to="/login"
+            className="font-semibold text-violet-600 dark:text-violet-400 hover:underline"
+          >
             Login
           </Link>
-        </div>
+        </p>
+
       </div>
     </div>
   );

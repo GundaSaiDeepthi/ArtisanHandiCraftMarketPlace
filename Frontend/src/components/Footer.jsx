@@ -4,190 +4,156 @@ import { Heart } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer
-      className="dark-gradient"
-      style={{
-        backgroundColor: "var(--card)",
-        borderTop: "1px solid var(--border)",
-        padding: "4rem 0 2rem 0",
-        marginTop: "4rem",
-        color: "var(--muted-foreground)",
-        fontSize: "0.9rem",
-      }}
-    >
-      <div className="container">
-        <div
-          className="grid-4"
-          style={{
-            marginBottom: "3rem",
-          }}
-        >
-          {/* Logo Section */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1rem",
-            }}
-          >
-            <span
-              style={{
-                fontFamily: "var(--font-display)",
-                fontWeight: 800,
-                fontSize: "1.35rem",
-                background:
-                  "linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
+    <footer className="mt-16 border-t border-slate-800 bg-slate-950 py-16 pb-8 text-sm text-slate-400">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Top Section */}
+        <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          
+          {/* Brand */}
+          <div className="space-y-4">
+            <h2 className="bg-gradient-to-r from-violet-400 via-fuchsia-500 to-pink-500 bg-clip-text text-2xl font-extrabold text-transparent">
               ArtisanMarket
-            </span>
+            </h2>
 
-            <p style={{ lineHeight: 1.6 }}>
+            <p className="leading-relaxed text-slate-400">
               A marketplace dedicated to honoring and supporting local artisans
-              by bringing their unique handcrafted items to your doorstep.
+              by bringing their unique handcrafted items directly to your
+              doorstep.
             </p>
           </div>
 
           {/* Categories */}
           <div>
-            <h4
-              style={{
-                color: "var(--card-foreground)",
-                marginBottom: "1.25rem",
-                fontSize: "1rem",
-              }}
-            >
+            <h3 className="mb-5 text-lg font-semibold text-white">
               Craft Categories
-            </h4>
+            </h3>
 
-            <ul
-              style={{
-                listStyle: "none",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.75rem",
-                padding: 0,
-              }}
-            >
+            <ul className="space-y-3">
               <li>
-                <Link to="/shop?category=Wood%20Craft">Wood Crafts</Link>
+                <Link
+                  to="/shop?category=Wood%20Craft"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Wood Crafts
+                </Link>
               </li>
+
               <li>
-                <Link to="/shop?category=Pottery">Traditional Pottery</Link>
+                <Link
+                  to="/shop?category=Pottery"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Traditional Pottery
+                </Link>
               </li>
+
               <li>
-                <Link to="/shop?category=Jewelry">Handmade Jewelry</Link>
+                <Link
+                  to="/shop?category=Jewelry"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Handmade Jewelry
+                </Link>
               </li>
+
               <li>
-                <Link to="/shop?category=Textiles">Artisan Textiles</Link>
+                <Link
+                  to="/shop?category=Textiles"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Artisan Textiles
+                </Link>
               </li>
+
               <li>
-                <Link to="/shop?category=Home%20Decor">Home Decor</Link>
+                <Link
+                  to="/shop?category=Home%20Decor"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Home Decor
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4
-              style={{
-                color: "var(--card-foreground)",
-                marginBottom: "1.25rem",
-                fontSize: "1rem",
-              }}
-            >
+            <h3 className="mb-5 text-lg font-semibold text-white">
               Quick Links
-            </h4>
+            </h3>
 
-            <ul
-              style={{
-                listStyle: "none",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.75rem",
-                padding: 0,
-              }}
-            >
+            <ul className="space-y-3">
               <li>
-                <Link to="/shop">Shop Collection</Link>
+                <Link
+                  to="/shop"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Shop Collection
+                </Link>
               </li>
+
               <li>
-                <Link to="/register?role=artisan">Join as Artisan</Link>
+                <Link
+                  to="/register?role=artisan"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Join as Artisan
+                </Link>
               </li>
+
               <li>
-                <Link to="/login">Account Login</Link>
+                <Link
+                  to="/login"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Account Login
+                </Link>
               </li>
+
               <li>
-                <Link to="/profile">My Orders</Link>
+                <Link
+                  to="/profile"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  My Orders
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Promise Section */}
+          {/* Promise */}
           <div>
-            <h4
-              style={{
-                color: "var(--card-foreground)",
-                marginBottom: "1.25rem",
-                fontSize: "1rem",
-              }}
-            >
+            <h3 className="mb-5 text-lg font-semibold text-white">
               Our Promise
-            </h4>
+            </h3>
 
-            <p
-              style={{
-                lineHeight: 1.6,
-                marginBottom: "1rem",
-              }}
-            >
-              Every item sold here is verified to be 100% handcrafted by true
-              artisans. We support fair trade and sustainable wages.
+            <p className="leading-relaxed text-slate-400">
+              Every item sold here is verified to be 100% handcrafted by
+              genuine artisans. We support fair trade, sustainable wages, and
+              help preserve traditional craftsmanship.
             </p>
           </div>
         </div>
 
-        <hr
-          style={{
-            border: 0,
-            borderTop: "1px solid var(--border)",
-            marginBottom: "2rem",
-          }}
-        />
+        {/* Divider */}
+        <div className="mb-8 h-px w-full bg-slate-800"></div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "1rem",
-          }}
-        >
+        {/* Bottom Bar */}
+        <div className="flex flex-col items-center justify-between gap-4 text-center text-slate-500 md:flex-row md:text-left">
           <p>
             © {new Date().getFullYear()} ArtisanHandiCraftMarketPlace. All
             rights reserved.
           </p>
 
-          <p
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.35rem",
-            }}
-          >
-            Made with
+          <div className="flex items-center gap-2">
+            <span>Made with</span>
             <Heart
-              size={14}
-              style={{
-                fill: "var(--danger)",
-                color: "var(--danger)",
-              }}
+              size={15}
+              className="fill-red-500 text-red-500"
             />
-            for local creators.
-          </p>
+            <span>for local creators.</span>
+          </div>
         </div>
       </div>
     </footer>
