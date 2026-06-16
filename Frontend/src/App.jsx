@@ -98,27 +98,51 @@ const AppContent = () => {
 
 <Route
   path="/artisan/dashboard"
-  element={<ArtisanDashboard />}
+  element={
+    <ProtectedRoute requiredRole="ARTISAN">
+      <ArtisanDashboard />
+    </ProtectedRoute>
+  }
 />
 <Route
   path="/artisan/orders"
-  element={<ArtisanOrders />}
+  element={
+    <ProtectedRoute requiredRole="ARTISAN">
+      <ArtisanOrders />
+    </ProtectedRoute>
+  }
 />
 <Route
   path="/artisan/products"
-  element={<MyProducts />}
+  element={
+    <ProtectedRoute requiredRole="ARTISAN">
+      <MyProducts />
+    </ProtectedRoute>
+  }
 />
 <Route
   path="/artisan/add-product"
-  element={<AddProduct />}
+  element={
+    <ProtectedRoute requiredRole="ARTISAN">
+      <AddProduct />
+    </ProtectedRoute>
+  }
 />
 <Route
   path="/artisan/edit-product/:productId"
-  element={<EditProduct />}
+  element={
+    <ProtectedRoute requiredRole="ARTISAN">
+      <EditProduct />
+    </ProtectedRoute>
+  }
 />
 <Route
   path="/artisan/sales-report"
-  element={<SalesReport />}
+  element={
+    <ProtectedRoute requiredRole="ARTISAN">
+      <SalesReport />
+    </ProtectedRoute>
+  }
 />
           {/* User Routes */}
           <Route

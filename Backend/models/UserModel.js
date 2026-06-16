@@ -219,10 +219,13 @@ const userSchema = new Schema(
       type: String,
       trim: true,
 
-      match: [
-        /^[6-9]\d{9}$/,
-        "Invalid phone number",
-      ],
+      validate: {
+        validator: function (v) {
+          if (!v) return true;
+          return /^[6-9]\d{9}$/.test(v);
+        },
+        message: "Invalid phone number",
+      },
 
       default: "",
     },

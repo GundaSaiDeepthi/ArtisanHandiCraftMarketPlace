@@ -625,6 +625,12 @@ artisanRoute.put(
 
         stock:
           req.body.stock,
+
+        material:
+          req.body.material,
+
+        dimensions:
+          req.body.dimensions,
       };
 
       /*

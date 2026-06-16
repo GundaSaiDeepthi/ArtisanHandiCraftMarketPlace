@@ -33,6 +33,11 @@ const orderSchema =
         required: true,
       },
 
+      paymentId: {
+        type: String,
+        default: null,
+      },
+
       paymentStatus: {
         type: String,
 
@@ -49,8 +54,10 @@ const orderSchema =
 
         enum: [
           "PLACED",
+          "PROCESSING",
           "SHIPPED",
           "DELIVERED",
+          "CANCELLED",
         ],
 
         default: "PLACED",
