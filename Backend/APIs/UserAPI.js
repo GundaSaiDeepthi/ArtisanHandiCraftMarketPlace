@@ -1255,17 +1255,21 @@ userRoute.post(
           req.user.userId
         );
 
-      await sendEmail({
+      try {
+        await sendEmail({
 
-        to:
-          user.email,
+          to:
+            user.email,
 
-        subject:
-          "Order Placed Successfully",
+          subject:
+            "Order Placed Successfully",
 
-        text:
-          `Your order has been placed successfully. Total Amount: ₹${totalAmount}`,
-      });
+          text:
+            `Your order has been placed successfully. Total Amount: ₹${totalAmount}`,
+        });
+      } catch (emailErr) {
+        console.error("Failed to send order placement confirmation email:", emailErr);
+      }
 
       res.status(201).json({
 

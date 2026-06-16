@@ -30,6 +30,9 @@ const transporter =
   nodemailer.createTransport({
 
     service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
 
     auth: {
 
@@ -38,6 +41,9 @@ const transporter =
 
       pass:
         process.env.EMAIL_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
     },
   });
 
@@ -790,15 +796,18 @@ adminRoute.patch(
       if (
         updatedOrder.user?.email
       ) {
+        try {
+          await sendOrderStatusEmail(
 
-        await sendOrderStatusEmail(
+            updatedOrder.user.email,
 
-          updatedOrder.user.email,
+            updatedOrder._id,
 
-          updatedOrder._id,
-
-          orderStatus
-        );
+            orderStatus
+          );
+        } catch (emailErr) {
+          console.error("Failed to send order status email:", emailErr);
+        }
       }
 
       /*

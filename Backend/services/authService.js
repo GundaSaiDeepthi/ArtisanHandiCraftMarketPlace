@@ -341,10 +341,16 @@ SEND OTP EMAIL
 ==================================
 */
 
-await sendOTPEmail(
-  normalizedEmail,
-  otp
-);
+let emailSent = true;
+try {
+  await sendOTPEmail(
+    normalizedEmail,
+    otp
+  );
+} catch (emailErr) {
+  console.error("Failed to send OTP verification email during registration:", emailErr);
+  emailSent = false;
+}
 
     /*
     ==================================
@@ -376,8 +382,10 @@ await sendOTPEmail(
   success: true,
   user: userResponse,
   otp,
-   message:
-    "Registration successful. OTP sent to your email.",
+   message: emailSent
+    ? "Registration successful. OTP sent to your email."
+    : "Registration successful. However, the verification email could not be sent. Please click 'Resend OTP' on the verification page.",
+  emailError: !emailSent,
 };
   };
 
