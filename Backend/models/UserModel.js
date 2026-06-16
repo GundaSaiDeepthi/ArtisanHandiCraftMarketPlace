@@ -389,7 +389,7 @@ PRE SAVE
 ==================================================
 */
 
-userSchema.pre("save", function (next) {
+userSchema.pre("save", function () {
   if (this.email) {
     this.email = this.email.toLowerCase().trim();
   }
@@ -401,8 +401,6 @@ userSchema.pre("save", function (next) {
   if (this.lastName) {
     this.lastName = this.lastName.trim();
   }
-
-  next();
 });
 
 /*
