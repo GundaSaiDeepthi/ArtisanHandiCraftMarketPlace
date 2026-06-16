@@ -31,7 +31,10 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      console.error("Unauthorized access");
+      // Don't log error for check-auth since it's normal for guests
+      if (!error.config?.url?.includes("/common-api/check-auth")) {
+        console.error("Unauthorized access");
+      }
     }
 
     return Promise.reject(error);
