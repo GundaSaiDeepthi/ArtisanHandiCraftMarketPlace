@@ -924,8 +924,6 @@ export const forgotPassword =
 
     await user.save();
 
-   await user.save();
-
 /*
 ==================================
 GENERATE RESET LINK
