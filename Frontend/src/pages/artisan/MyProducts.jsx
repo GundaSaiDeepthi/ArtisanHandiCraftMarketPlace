@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../services/api";
 import { Link } from "react-router-dom";
 import {
   Package,
@@ -15,16 +15,7 @@ const MyProducts = () => {
 
   const fetchProducts = async () => {
     try {
-      const token = localStorage.getItem("token");
-
-      const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/artisan-api/my-products`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await api.get("/artisan-api/my-products");
 
       setProducts(response.data.payload || []);
     } catch (error) {
@@ -46,17 +37,10 @@ const MyProducts = () => {
     currentStatus
   ) => {
     try {
-      const token = localStorage.getItem("token");
-
-      await axios.patch(
-        `${import.meta.env.VITE_API_URL}/artisan-api/products/${productId}/status`,
+      await api.patch(
+        `/artisan-api/products/${productId}/status`,
         {
           isAvailable: !currentStatus,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
         }
       );
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import { useSocket } from "../context/SocketContext";
 import {
   Package,
@@ -18,12 +18,7 @@ const MyOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/user-api/orders`,
-        {
-          withCredentials: true,
-        }
-      );
+      const response = await api.get("/user-api/orders");
 
       setOrders(response.data.payload || []);
     } catch (error) {

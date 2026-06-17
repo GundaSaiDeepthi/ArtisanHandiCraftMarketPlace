@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import axios from "axios";
+import api from "../../services/api";
 import {
   IndianRupee,
   ShoppingBag,
@@ -13,16 +13,7 @@ const SalesReport = () => {
 
   const getSalesReport = async () => {
     try {
-      const token = localStorage.getItem("token");
-
-      const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/artisan-api/sales-report`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await api.get("/artisan-api/sales-report");
 
       setSales(response.data.payload || []);
     } catch (error) {

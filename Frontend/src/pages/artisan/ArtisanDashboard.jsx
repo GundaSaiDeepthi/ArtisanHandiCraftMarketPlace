@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../services/api";
 import { Link } from "react-router-dom";
 import {
   Package,
@@ -22,18 +22,16 @@ const ArtisanDashboard = () => {
 
   const getDashboardData = async () => {
     try {
-      const token = localStorage.getItem("token");
+      const response = await api.get("/artisan-api/dashboard");
 
-      const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/artisan-api/dashboard`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      setDashboard(response.data.payload);
+      if (response.data && response.data.payload) {
+        setDashboard({
+          totalProducts: response.data.payload.totalProducts || 0,
+          totalOrders: response.data.payload.totalOrders || 0,
+          totalSales: response.data.payload.totalSales || 0,
+          totalRevenue: response.data.payload.totalRevenue || 0,
+        });
+      }
     } catch (error) {
       console.error("Error fetching dashboard:", error);
     } finally {
@@ -61,7 +59,7 @@ const ArtisanDashboard = () => {
   const stats = [
     {
       title: "Total Products",
-      value: dashboard.totalProducts,
+      value: dashboard?.totalProducts || 0,
       icon: Package,
       gradient:
         "from-blue-500/20 to-cyan-500/20",
@@ -69,7 +67,7 @@ const ArtisanDashboard = () => {
     },
     {
       title: "Total Orders",
-      value: dashboard.totalOrders,
+      value: dashboard?.totalOrders || 0,
       icon: ShoppingBag,
       gradient:
         "from-emerald-500/20 to-green-500/20",
@@ -77,7 +75,7 @@ const ArtisanDashboard = () => {
     },
     {
       title: "Total Sales",
-      value: dashboard.totalSales,
+      value: dashboard?.totalSales || 0,
       icon: TrendingUp,
       gradient:
         "from-amber-500/20 to-yellow-500/20",
@@ -86,7 +84,7 @@ const ArtisanDashboard = () => {
     {
       title: "Revenue",
       value: `₹${Number(
-        dashboard.totalRevenue || 0
+        dashboard?.totalRevenue || 0
       ).toLocaleString("en-IN")}`,
       icon: IndianRupee,
       gradient:
@@ -206,21 +204,21 @@ const ArtisanDashboard = () => {
               <div className="flex justify-between">
                 <span>Products Listed</span>
                 <span className="font-semibold">
-                  {dashboard.totalProducts}
+                  {dashboard?.totalProducts || 0}
                 </span>
               </div>
 
               <div className="flex justify-between">
                 <span>Orders Received</span>
                 <span className="font-semibold">
-                  {dashboard.totalOrders}
+                  {dashboard?.totalOrders || 0}
                 </span>
               </div>
 
               <div className="flex justify-between">
                 <span>Units Sold</span>
                 <span className="font-semibold">
-                  {dashboard.totalSales}
+                  {dashboard?.totalSales || 0}
                 </span>
               </div>
 
@@ -229,7 +227,7 @@ const ArtisanDashboard = () => {
                 <span className="font-semibold text-green-400">
                   ₹
                   {Number(
-                    dashboard.totalRevenue || 0
+                    dashboard?.totalRevenue || 0
                   ).toLocaleString("en-IN")}
                 </span>
               </div>

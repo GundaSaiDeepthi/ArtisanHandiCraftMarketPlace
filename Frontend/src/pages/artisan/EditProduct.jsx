@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../services/api";
 import { useNavigate, useParams } from "react-router-dom";
 import { Upload, PencilLine, Package } from "lucide-react";
 
@@ -29,8 +29,8 @@ const EditProduct = () => {
   // Fetch Product
   const fetchProduct = async () => {
     try {
-      const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/artisan-api/products/${productId}`
+      const response = await api.get(
+        `/artisan-api/products/${productId}`
       );
 
       const product = response.data.payload;
@@ -82,8 +82,6 @@ const EditProduct = () => {
     try {
       setSaving(true);
 
-      const token = localStorage.getItem("token");
-
       const data = new FormData();
 
       Object.entries(formData).forEach(([key, value]) => {
@@ -94,12 +92,11 @@ const EditProduct = () => {
         data.append("image", image);
       }
 
-      const response = await axios.put(
-        `${import.meta.env.VITE_API_URL}/artisan-api/products/${productId}`,
+      const response = await api.put(
+        `/artisan-api/products/${productId}`,
         data,
         {
           headers: {
-            Authorization: `Bearer ${token}`,
             "Content-Type": "multipart/form-data",
           },
         }

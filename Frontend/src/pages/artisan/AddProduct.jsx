@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { Upload, PackagePlus } from "lucide-react";
 
@@ -42,8 +42,6 @@ const AddProduct = () => {
     try {
       setLoading(true);
 
-      const token = localStorage.getItem("token");
-
       const data = new FormData();
 
       Object.entries(formData).forEach(([key, value]) => {
@@ -54,12 +52,11 @@ const AddProduct = () => {
         data.append("image", image);
       }
 
-      const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/artisan-api/products`,
+      const response = await api.post(
+        "/artisan-api/products",
         data,
         {
           headers: {
-            Authorization: `Bearer ${token}`,
             "Content-Type": "multipart/form-data",
           },
         }

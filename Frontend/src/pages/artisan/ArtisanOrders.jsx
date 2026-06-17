@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../services/api";
 import {
   ShoppingBag,
   Package,
@@ -13,16 +13,7 @@ const ArtisanOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      const token = localStorage.getItem("token");
-
-      const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/artisan-api/orders`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await api.get("/artisan-api/orders");
 
       setOrders(response.data.payload || []);
     } catch (error) {
