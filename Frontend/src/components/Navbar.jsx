@@ -132,6 +132,24 @@ const Navbar = () => {
               </>
             )}
 
+            {user?.role === "ARTISAN" && (
+              <Link
+                to="/artisan/dashboard"
+                className="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-violet-600 dark:hover:text-white transition-colors"
+              >
+                Dashboard
+              </Link>
+            )}
+
+            {user?.role === "ADMIN" && (
+              <Link
+                to="/admin/orders"
+                className="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-violet-600 dark:hover:text-white transition-colors"
+              >
+                Admin Orders
+              </Link>
+            )}
+
             <button
               onClick={toggleTheme}
               className="rounded-lg p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#0f172a] hover:text-slate-900 dark:hover:text-white transition-all"
@@ -147,7 +165,13 @@ const Navbar = () => {
               <div className="flex items-center gap-4">
 
                 <Link
-                  to="/profile"
+                  to={
+                    user.role === "ARTISAN"
+                      ? "/artisan/dashboard"
+                      : user.role === "ADMIN"
+                      ? "/admin/orders"
+                      : "/"
+                  }
                   className="flex items-center gap-2"
                 >
                   <img
@@ -254,16 +278,25 @@ const Navbar = () => {
               {user ? (
                 <>
                   <Link
-                    to="/profile"
+                    to={
+                      user.role === "ARTISAN"
+                        ? "/artisan/dashboard"
+                        : user.role === "ADMIN"
+                        ? "/admin/orders"
+                        : "/"
+                    }
                     className="block text-slate-700 dark:text-slate-300 hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Profile
+                    {user.role === "ARTISAN" ||
+                    user.role === "ADMIN"
+                      ? "Dashboard"
+                      : "Home"}
                   </Link>
 
                   <button
                     onClick={handleLogout}
-                    className="text-red-500 hover:text-red-600"
+                    className="text-red-500 hover:text-red-600 block text-left"
                   >
                     Logout
                   </button>
