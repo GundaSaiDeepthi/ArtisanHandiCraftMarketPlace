@@ -306,7 +306,7 @@ const userSchema = new Schema(
 
     isArtisanApproved: {
       type: Boolean,
-      default: false,
+      default: true,
     },
 
     /*

@@ -36,6 +36,8 @@ import { adminRoute } from "./APIs/AdminAPI.js";
 
 import { paymentRoute } from "./APIs/PaymentAPI.js";
 
+import { UserTypeModel } from "./models/UserModel.js";
+
 /*
 ==================================================
 CHECK REQUIRED ENV VARIABLES
@@ -645,6 +647,19 @@ const connectDB = async () => {
       logger.error(localErr);
       process.exit(1);
     }
+  }
+
+  // Auto-approve all registered artisan profiles on database connect
+  try {
+    const result = await UserTypeModel.updateMany(
+      { role: "ARTISAN", isArtisanApproved: { $ne: true } },
+      { $set: { isArtisanApproved: true } }
+    );
+    if (result.modifiedCount > 0) {
+      logger.info(`Auto-approved ${result.modifiedCount} pending artisan accounts.`);
+    }
+  } catch (approveErr) {
+    logger.error("Error auto-approving artisans:", approveErr.message);
   }
 
   /*
