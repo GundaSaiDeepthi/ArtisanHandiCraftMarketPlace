@@ -104,7 +104,7 @@ userRoute.post(
     let cloudinaryResult;
 
     try {
-
+      console.log("[DEBUG] UserAPI POST /users called for email:", req.body?.email);
       let userObj =
         req.body;
 
@@ -115,7 +115,7 @@ userRoute.post(
       */
 
       if (req.file) {
-
+        console.log("[DEBUG] UserAPI: Profile image uploaded. Buffer size:", req.file.buffer.length);
         cloudinaryResult =
           await uploadToCloudinary(
             req.file.buffer
@@ -130,6 +130,7 @@ userRoute.post(
       REGISTER USER
       ==================================
       */
+      console.log("[DEBUG] UserAPI: Registering user with database...");
  const newUserObj =
   await register({
 
@@ -145,7 +146,7 @@ userRoute.post(
       
 
           
-
+      console.log("[DEBUG] UserAPI: Registration succeeded, returning response payload.");
       res.status(201).json({
 
         success: true,
@@ -158,7 +159,7 @@ userRoute.post(
       });
 
     } catch (err) {
-
+      console.error("[DEBUG] UserAPI POST /users error caught:", err.message);
       if (
         cloudinaryResult
           ?.public_id

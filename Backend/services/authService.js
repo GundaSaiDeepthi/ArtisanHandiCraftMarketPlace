@@ -67,6 +67,7 @@ REGISTER USER
 
 export const register =
   async (userObj) => {
+    console.log("[DEBUG] authService.register invoked for email:", userObj?.email);
 
     /*
     ==================================
@@ -324,6 +325,7 @@ if (role === "ARTISAN") {
     ==================================
     */
 
+    console.log("[DEBUG] authService.register: Validating user document...");
     await userDoc.validate();
 
     /*
@@ -332,8 +334,10 @@ if (role === "ARTISAN") {
     ==================================
     */
 
-  const createdUser =
-  await userDoc.save();
+    console.log("[DEBUG] authService.register: Saving user document to MongoDB...");
+    const createdUser =
+    await userDoc.save();
+    console.log("[DEBUG] authService.register: User saved successfully. ID:", createdUser._id);
 
 /*
 ==================================
@@ -341,16 +345,18 @@ SEND OTP EMAIL
 ==================================
 */
 
-let emailSent = true;
-try {
-  await sendOTPEmail(
-    normalizedEmail,
-    otp
-  );
-} catch (emailErr) {
-  console.error("Failed to send OTP verification email during registration:", emailErr);
-  emailSent = false;
-}
+    console.log("[DEBUG] authService.register: Sending OTP verification email...");
+    let emailSent = true;
+    try {
+      await sendOTPEmail(
+        normalizedEmail,
+        otp
+      );
+      console.log("[DEBUG] authService.register: OTP verification email sent successfully.");
+    } catch (emailErr) {
+      console.error("[DEBUG] authService.register: Failed to send OTP verification email:", emailErr);
+      emailSent = false;
+    }
 
     /*
     ==================================

@@ -278,7 +278,7 @@ productSchema.pre(
 
   "save",
 
-  function (next) {
+  function () {
 
     /*
     ==================================
@@ -306,8 +306,6 @@ productSchema.pre(
       Number(
         this.rating.toFixed(1)
       );
-
-    next();
   }
 );
 

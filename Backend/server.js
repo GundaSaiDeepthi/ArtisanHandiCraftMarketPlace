@@ -419,6 +419,7 @@ app.use(
     res,
     next
   ) => {
+    console.error("[DEBUG] GLOBAL ERROR HANDLER TRIGGERED:", err);
     logger.error(
       `ERROR NAME: ${err.name}`
     );

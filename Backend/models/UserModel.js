@@ -390,7 +390,8 @@ PRE SAVE
 ==================================================
 */
 
-userSchema.pre("save", function (next) {
+userSchema.pre("save", function () {
+  console.log("[DEBUG] UserModel pre-save hook triggered for:", this.email);
   if (this.email) {
     this.email = this.email.toLowerCase().trim();
   }
@@ -402,8 +403,6 @@ userSchema.pre("save", function (next) {
   if (this.lastName) {
     this.lastName = this.lastName.trim();
   }
-  
-  next();
 });
 
 /*
