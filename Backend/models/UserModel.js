@@ -1,3 +1,4 @@
+console.log("USERMODEL VERSION JUNE17");
 import { Schema, model } from "mongoose";
 
 /*
