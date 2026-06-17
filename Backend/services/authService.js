@@ -346,6 +346,7 @@ SEND OTP EMAIL
 */
 
     console.log("[DEBUG] authService.register: Sending OTP verification email...");
+    console.log(`[DEBUG] >>> SECURITY BYPASS / DISPLAY OTP: Generated OTP for ${normalizedEmail} is: ${otp} <<<`);
     let emailSent = true;
     try {
       await sendOTPEmail(
@@ -633,21 +634,24 @@ export const resendOTP =
 
     await user.save();
 
-/*
-==================================
-SEND OTP EMAIL
-==================================
-*/
-
-await sendOTPEmail(
-  user.email,
-  otp
-);
+console.log(`[DEBUG] >>> SECURITY BYPASS / DISPLAY OTP: Resending OTP for ${user.email} is: ${otp} <<<`);
+let emailSent = true;
+try {
+  await sendOTPEmail(
+    user.email,
+    otp
+  );
+} catch (emailErr) {
+  console.error("[DEBUG] authService.resendOTP: Failed to send email:", emailErr);
+  emailSent = false;
+}
 
 return {
   success: true,
-  message:
-    "OTP sent successfully",
+  message: emailSent
+    ? "OTP sent successfully"
+    : "OTP generated successfully. However, the verification email could not be sent. Please retrieve the OTP from server logs.",
+  emailError: !emailSent,
 };
   };
 
@@ -947,21 +951,24 @@ GENERATE RESET LINK
 const resetLink =
 `${process.env.CLIENT_URL}/reset-password?token=${resetToken}`;
 
-/*
-==================================
-SEND RESET EMAIL
-==================================
-*/
-
-await sendResetPasswordEmail(
-  user.email,
-  resetLink
-);
+console.log(`[DEBUG] >>> SECURITY BYPASS / DISPLAY RESET LINK: Reset link for ${user.email} is: ${resetLink} <<<`);
+let emailSent = true;
+try {
+  await sendResetPasswordEmail(
+    user.email,
+    resetLink
+  );
+} catch (emailErr) {
+  console.error("[DEBUG] authService.forgotPassword: Failed to send reset email:", emailErr);
+  emailSent = false;
+}
 
 return {
   success: true,
-  message:
-    "Password reset link sent to email",
+  message: emailSent
+    ? "Password reset link sent to email"
+    : "Reset link generated successfully. However, the email could not be sent. Please retrieve the reset link from server logs.",
+  emailError: !emailSent,
 };
   };
 
